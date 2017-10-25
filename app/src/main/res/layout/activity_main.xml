@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a100580683.panelprototype.MainActivity">
+
+    <TableLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ToggleButton
+                android:id="@+id/toggleButton0"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"
+
+                />
+
+            <ToggleButton
+                android:id="@+id/toggleButton1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+
+            <ToggleButton
+                android:id="@+id/toggleButton2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:text="@string/togglebutton"
+                android:onClick="flipPanel"
+                android:textOff = "@string/blank"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ToggleButton
+                android:id="@+id/toggleButton5"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton6"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton7"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton8"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton9"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ToggleButton
+                android:id="@+id/toggleButton10"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton11"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton12"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton13"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton14"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ToggleButton
+                android:id="@+id/toggleButton15"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton16"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton17"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton18"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton19"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ToggleButton
+                android:id="@+id/toggleButton20"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton21"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton22"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton23"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+
+            <ToggleButton
+                android:id="@+id/toggleButton24"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff = "@string/blank"/>
+        </TableRow>
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
