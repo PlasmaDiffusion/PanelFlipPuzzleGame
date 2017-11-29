@@ -18,7 +18,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <TableRow
             android:layout_width="match_parent"
@@ -31,7 +31,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"
+                android:textOff="@string/blank"
 
                 />
 
@@ -42,7 +42,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
 
             <ToggleButton
@@ -52,7 +52,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton3"
@@ -61,22 +61,21 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton4"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:checked="false"
-                android:text="@string/togglebutton"
                 android:onClick="flipPanel"
-                android:textOff = "@string/blank"
-                />
+                android:text="@string/togglebutton"
+                android:textOff="@string/blank" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ToggleButton
                 android:id="@+id/toggleButton5"
@@ -85,7 +84,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton6"
@@ -94,7 +93,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton7"
@@ -103,7 +102,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton8"
@@ -112,7 +111,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton9"
@@ -121,12 +120,12 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ToggleButton
                 android:id="@+id/toggleButton10"
@@ -135,7 +134,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton11"
@@ -144,7 +143,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton12"
@@ -153,7 +152,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton13"
@@ -162,7 +161,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton14"
@@ -171,12 +170,12 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ToggleButton
                 android:id="@+id/toggleButton15"
@@ -185,7 +184,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton16"
@@ -194,7 +193,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton17"
@@ -203,7 +202,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton18"
@@ -212,7 +211,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton19"
@@ -221,12 +220,12 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ToggleButton
                 android:id="@+id/toggleButton20"
@@ -235,7 +234,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton21"
@@ -244,7 +243,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton22"
@@ -253,7 +252,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton23"
@@ -262,7 +261,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
 
             <ToggleButton
                 android:id="@+id/toggleButton24"
@@ -271,8 +270,14 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff = "@string/blank"/>
+                android:textOff="@string/blank" />
         </TableRow>
     </TableLayout>
+
+    <TextView
+        android:id="@+id/txt_Turns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flips:" />
 
 </android.support.constraint.ConstraintLayout>

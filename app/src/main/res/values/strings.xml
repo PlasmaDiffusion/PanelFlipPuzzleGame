@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PanelPrototype</string>
+    <string name="app_name">Tile Flippers</string>
     <string name="togglebutton">ToggleButton</string>
     <string name="blank" />
 </resources>
