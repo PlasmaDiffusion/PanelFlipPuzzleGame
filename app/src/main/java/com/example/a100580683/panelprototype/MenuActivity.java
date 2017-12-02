@@ -21,6 +21,12 @@ public class MenuActivity extends AppCompatActivity{
     }
 
     public void showTutorial(View view){
+        Intent intent = new Intent(this, HelpActivity.class);
+        startActivity(intent);
+    }
 
+    public void showScores(View view){
+        Intent intent = new Intent(this, ScoreActivity.class);
+        startActivity(intent);
     }
 }
