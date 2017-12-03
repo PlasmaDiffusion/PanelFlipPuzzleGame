@@ -1,24 +1,122 @@
 package com.example.a100580683.panelprototype;
 
 import android.graphics.Color;
+import android.graphics.DashPathEffect;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.Debug;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.RectF;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private int[] panelIDs;// = new int[25];
+    private String winLayout; // 0 = off (blue), 1 = on (orange), 2 = doesn't matter
     private TextView turnDisplay;
     private int turns = 0;
+
+
+    private Bitmap outline;
+    private Handler handler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initPanels();
         turnDisplay = (TextView)findViewById(R.id.txt_Turns);
+
+        loadLevel();
+    }
+
+
+    private void loadLevel() {
+
+        Bitmap level1Image;
+
+        level1Image = BitmapFactory.decodeResource(getResources(), R.raw.level1);
+        level1Image = Bitmap.createScaledBitmap(level1Image, level1Image.getWidth(), level1Image.getHeight(), false);
+
+        final int onColour = 255 + 106 + 0;
+        final int offColour = 0 + 148 + 255;
+
+        winLayout = "";
+        //Read top half of image for level win layout
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+
+                int pixel = level1Image.getPixel((j * 10) + 5, (i * 10) + 5);
+                int redValue = Color.red(pixel);
+                int blueValue = Color.blue(pixel);
+                int greenValue = Color.green(pixel);
+
+                Log.i("pixel RGB: ", Integer.toString(redValue) + " " + Integer.toString(greenValue) + " " + Integer.toString(blueValue));
+
+                //The colour becomes a string
+                if (onColour == redValue + blueValue + greenValue) winLayout += "o";
+                else if (offColour == redValue + blueValue + greenValue) winLayout += "x";
+                else winLayout += "-";
+            }
+
+        }
+
+        Log.i("win string: ", winLayout);
+
+        ToggleButton panel;
+
+        String startingLayout = "";
+
+        //Read bottom half for starting level layout
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+
+
+                int pixel = level1Image.getPixel(j * 10, (i + 6) * 10);
+                int redValue = Color.red(pixel);
+                int blueValue = Color.blue(pixel);
+                int greenValue = Color.green(pixel);
+
+                if (onColour == redValue + blueValue + greenValue) startingLayout += "o";
+                else startingLayout += "x";
+
+
+            }
+
+        }
+
+        //Now modify panels according to the level layout
+        for (int i = 0; i < 25; i++) {
+
+            panel = (ToggleButton) findViewById(panelIDs[i]);
+
+            //Detect if its an orange panel
+            if (startingLayout.charAt(i) == 'o') {
+
+                panel.setBackgroundColor(Color.parseColor("#f69256"));
+                panel.setText("O");
+                panel.toggle();
+
+            } else //If not its blue
+                panel.setBackgroundColor(Color.parseColor("#1d4e89"));
+
+            //Set win condition indicator
+            if (winLayout.charAt(i) == 'x')
+                panel.setTextColor(getResources().getColor(R.color.colorOffLight));
+            else if (winLayout.charAt(i) == 'o')
+                panel.setTextColor(getResources().getColor(R.color.colorOnDark));
+        }
     }
 
     public void initPanels()
@@ -31,20 +129,15 @@ public class MainActivity extends AppCompatActivity {
                 R.id.toggleButton15, R.id.toggleButton16, R.id.toggleButton17, R.id.toggleButton18, R.id.toggleButton19,
                 R.id.toggleButton20, R.id.toggleButton21, R.id.toggleButton22, R.id.toggleButton23, R.id.toggleButton24};
 
+
+        //Set panels to whatever colour they should be and also display the win requirements.
         for(int i= 0; i < 25; i++){
             panel = (ToggleButton) findViewById((panelIDs[i]));
             panel.setText("X");
             panel.setTextOn("O");
             panel.setTextOff("X");
 
-            panel = (ToggleButton)findViewById(panelIDs[i]);
 
-            if(panel.isChecked()){
-                panel.setBackgroundColor(Color.parseColor("#f69256"));
-
-            }else{
-                panel.setBackgroundColor(Color.parseColor("#1d4e89"));
-            }
         }
     }
 
@@ -75,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
 
         int startOfRow = clickedPanelNumber - (clickedPanelNumber % 5);
 
-        //Toggle buttons vertically
+        //Toggle buttons horizontally
         for (int i = startOfRow; i < startOfRow + 5; i++)
         {
 
@@ -110,9 +203,36 @@ public class MainActivity extends AppCompatActivity {
         turns++;
 
         turnDisplay.setText("Flips: " + turns);
+
+        if(checkIfWon()) endGame(source);
+
     }
+
+    private  boolean checkIfWon()
+    {
+        ToggleButton panel;
+        for(int i= 0; i < 25; i++)
+        {
+            //Do nothing if this panel doesn't matter
+            if (winLayout.charAt(i) == '-') continue;
+
+            panel = (ToggleButton)findViewById(panelIDs[i]);
+
+            if (!panel.isChecked() && winLayout.charAt(i) == 'x') continue;
+            else if (panel.isChecked() && winLayout.charAt(i) == 'o') continue;
+            else return false; //Game hasn't been won yet
+
+
+        }
+
+        //If made through the above, ya won
+        return  true;
+    }
+
 
     public void endGame(View view){
         finish();
     }
+
+
 }
