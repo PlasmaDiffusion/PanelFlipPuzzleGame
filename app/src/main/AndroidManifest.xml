@@ -27,6 +27,12 @@
         <activity android:name=".ScoreActivity">
 
         </activity>
+        <activity android:name=".LevelSelectActivity">
+
+        </activity>
+        <activity android:name=".LevelPreviewActivity">
+
+        </activity>
     </application>
 
 </manifest>

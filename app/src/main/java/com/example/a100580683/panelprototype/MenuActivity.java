@@ -16,7 +16,7 @@ public class MenuActivity extends AppCompatActivity{
     }
 
     public void startGame(View view){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, LevelSelectActivity.class);
         startActivity(intent);
     }
 
@@ -25,8 +25,5 @@ public class MenuActivity extends AppCompatActivity{
         startActivity(intent);
     }
 
-    public void showScores(View view){
-        Intent intent = new Intent(this, ScoreActivity.class);
-        startActivity(intent);
-    }
+
 }
