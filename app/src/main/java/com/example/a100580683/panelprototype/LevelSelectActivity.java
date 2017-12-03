@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ToggleButton;
 
 import java.util.Random;
 
@@ -19,20 +21,31 @@ public class LevelSelectActivity extends AppCompatActivity {
     final int RCODE_SCORE = 102;
     final int RCODE_CANCEL = -1;
 
+    int[] levels;
+
     int levelSelected = -1;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
+
+        levels = new int[]
+                {
+                R.raw.level1, R.raw.level2, R.raw.level3
+        };
+
     }
 
     public void selectLevel(View view){
         //With multiple levels, put them in a list and use the index to choose the
         //level value, like with the in-game tile select
-        levelSelected = (int)(Math.random() * 100) % 10;
+        Button btn = (Button)findViewById(view.getId());
+
+        levelSelected = Integer.parseInt(btn.getText().toString());
 
 
         Intent intent = new Intent(this, LevelPreviewActivity.class);
         intent.putExtra("LevelNo",levelSelected);
+        intent.putExtra("LevelImage",levels[levelSelected -1]);
         startActivityForResult(intent, QCODE_SELECT);
     }
 
@@ -43,6 +56,7 @@ public class LevelSelectActivity extends AppCompatActivity {
                 //The activity will return the number of turns taken (Or -1 if they quit)
                 Intent intent = new Intent(this, MainActivity.class);
                 //Do something here to tell the MainActivity which level to load
+                intent.putExtra("LevelImage",levels[levelSelected -1]);
                 startActivity(intent);
             }
             else if(responseCode == RCODE_SCORE){

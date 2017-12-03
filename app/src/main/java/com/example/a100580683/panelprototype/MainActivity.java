@@ -1,5 +1,6 @@
 package com.example.a100580683.panelprototype;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.drawable.BitmapDrawable;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView turnDisplay;
     private int turns = 0;
 
+    private int level = 0;
 
     private Bitmap outline;
     private Handler handler;
@@ -38,16 +40,24 @@ public class MainActivity extends AppCompatActivity {
         initPanels();
         turnDisplay = (TextView)findViewById(R.id.txt_Turns);
 
-        loadLevel();
+        Intent callingIntent = getIntent();
+
+        level = callingIntent.getIntExtra("LevelImage", 0);
+
+        loadLevel(level);
+
+
     }
 
 
-    private void loadLevel() {
+    private void loadLevel(int levelImageID) {
 
         Bitmap level1Image;
 
-        level1Image = BitmapFactory.decodeResource(getResources(), R.raw.level1);
-        level1Image = Bitmap.createScaledBitmap(level1Image, level1Image.getWidth(), level1Image.getHeight(), false);
+        level1Image = BitmapFactory.decodeResource(getResources(), levelImageID);
+        level1Image = Bitmap.createScaledBitmap(level1Image, 50, 110, false);
+
+
 
         final int onColour = 255 + 106 + 0;
         final int offColour = 0 + 148 + 255;
@@ -83,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             for (int j = 0; j < 5; j++) {
 
 
-                int pixel = level1Image.getPixel(j * 10, (i + 6) * 10);
+                int pixel = level1Image.getPixel( 5 + (j * 10), 5 + (i + 6) * 10);
                 int redValue = Color.red(pixel);
                 int blueValue = Color.blue(pixel);
                 int greenValue = Color.green(pixel);
