@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 /**
  * Created by 100585588 on 12/4/2017.
@@ -18,7 +19,6 @@ public class HighscoreDB extends SQLiteOpenHelper {
     static final String CREATE_STATEMENT = "CREATE TABLE Scores(\n" +
             "id int primary key, \n"+
             "levelNo int not null, \n" +
-            "name varchar(100) not null, \n"+
             "turns int not null\n"+
             ")\n";
 
@@ -37,14 +37,14 @@ public class HighscoreDB extends SQLiteOpenHelper {
         db.execSQL(CREATE_STATEMENT);
     }
 
-    public Highscore createScore(int level, String name, int turns){
-        Highscore toAdd = new Highscore(level, name, turns);
+    public Highscore createScore(int level, int turns){
+        Highscore toAdd = new Highscore(level, turns);
 
+        Log.i("Turns", Integer.toString(turns));
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues newValues = new ContentValues();
         newValues.put("levelNo", level);
-        newValues.put("name", name);
         newValues.put("turns", turns);
 
         long id = db.insert(TABLE, null, newValues);
@@ -54,42 +54,44 @@ public class HighscoreDB extends SQLiteOpenHelper {
         return toAdd;
     }
 
-    public Highscore[] getScore(int lev){
+    public String[] getScore(int lev){
         Highscore[] scores = null;
+        String[] scoreStrings = null;
 
         SQLiteDatabase db = this.getReadableDatabase();
-        String[] columns = new String[] {"id", "levelNo", "name", "turns"};
+        String[] columns = new String[] {"id", "levelNo", "turns"};
         String where = "levelNo = ?";
         String[] whereArgs = new String[] { "" + lev };
         //Figure out how to format the orderBy string
-        Cursor cursor = db.query(TABLE, columns, where, whereArgs, "", "", "");
-
+        Cursor cursor = db.query(TABLE, columns, where, whereArgs, "", "", "turns ASC");
         if(cursor.getCount() > 0) {
             scores = new Highscore[cursor.getCount()];
+            scoreStrings = new String[cursor.getCount()];
         }
 
-        int i = 0;
+
         cursor.moveToFirst();
-        do{
-            if(!cursor.isAfterLast()){
-                int ide = cursor.getInt(0);
-                int lvl = cursor.getInt(1);
-                String nam = cursor.getString(2);
-                int trn = cursor.getInt(3);
-                scores[i] = new Highscore(lvl, nam, trn);
-                scores[i].setId(ide);
-               i++;
-            }
-        }while (!cursor.isAfterLast());
 
-        return scores;
+        for(int i= 0; i < cursor.getCount(); i++) {
+            int ide = cursor.getInt(0);
+            int lvl = cursor.getInt(1);
+            int trn = cursor.getInt(2);
+            scores[i] = new Highscore(lvl, trn);
+            scores[i].setId(ide);
 
+            Log.i("ToString", scores[i].toString());
+            scoreStrings[i] = scores[i].toString();
+            cursor.moveToNext();
+        }
+            cursor.close();
+
+            return scoreStrings;
     }
 
     public boolean clearLevel(int level){
         SQLiteDatabase db = this.getWritableDatabase();
 
-        int numRows = db.delete(TABLE, "levlNo = ?", new String[] { "" + level });
+        int numRows = db.delete(TABLE, "levelNo = ?", new String[] { "" + level });
 
         return (numRows == 1);
     }

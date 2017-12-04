@@ -3,6 +3,7 @@ package com.example.a100580683.panelprototype;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ToggleButton;
@@ -14,9 +15,11 @@ import java.util.Random;
  */
 
 public class LevelSelectActivity extends AppCompatActivity {
+private HighscoreDB scoreDB;
 
     final int QCODE_SELECT = 100;
     final int QCODE_SCORE = 200;
+    final int QCODE_PLAY = 300;
     final int RCODE_START = 101;
     final int RCODE_SCORE = 102;
     final int RCODE_CANCEL = -1;
@@ -33,20 +36,20 @@ public class LevelSelectActivity extends AppCompatActivity {
                 R.raw.level1, R.raw.level2, R.raw.level3
         };
 
+        scoreDB = new HighscoreDB(this);
+
     }
 
     public void selectLevel(View view){
         //With multiple levels, put them in a list and use the index to choose the
         //level value, like with the in-game tile select
+
         Button btn = (Button)findViewById(view.getId());
 
         levelSelected = Integer.parseInt(btn.getText().toString());
 
 
-        Intent intent = new Intent(this, LevelPreviewActivity.class);
-        intent.putExtra("LevelNo",levelSelected);
-        intent.putExtra("LevelImage",levels[levelSelected -1]);
-        startActivityForResult(intent, QCODE_SELECT);
+        previewLevel();
     }
 
     public void onActivityResult(int requestCode, int responseCode, Intent data){
@@ -57,20 +60,37 @@ public class LevelSelectActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, MainActivity.class);
                 //Do something here to tell the MainActivity which level to load
                 intent.putExtra("LevelImage",levels[levelSelected -1]);
-                startActivity(intent);
+                startActivityForResult(intent, QCODE_PLAY);
             }
             else if(responseCode == RCODE_SCORE){
                 //Later, send an array of scores from the SQLite database
-                Intent intent = new Intent(this, ScoreActivity.class);
-                startActivityForResult(intent, QCODE_SCORE);
+                if(scoreDB.getScore(levelSelected).length > 0) {
+                    Intent intent = new Intent(this, ScoreActivity.class);
+                    intent.putExtra("Scores", scoreDB.getScore(levelSelected));
+                    startActivityForResult(intent, QCODE_SCORE);
+                }
             }
         }
         else if(requestCode == QCODE_SCORE) {
             //When the score is closed, re-open the level preview
-            Intent intent = new Intent(this, LevelPreviewActivity.class);
-            intent.putExtra("LevelNo", levelSelected);
-            startActivityForResult(intent, QCODE_SELECT);
+            if(responseCode != -1) {
+            scoreDB.clearLevel(levelSelected);
+
+            }
+            previewLevel();
+        }
+        else if(requestCode == QCODE_PLAY){
+            Log.i("Restul", responseCode + "");
+            if(responseCode != 0)
+            scoreDB.createScore(levelSelected,responseCode);
         }
 
+    }
+
+    void previewLevel(){
+        Intent intent = new Intent(this, LevelPreviewActivity.class);
+        intent.putExtra("LevelNo",levelSelected);
+        intent.putExtra("LevelImage",levels[levelSelected -1]);
+        startActivityForResult(intent, QCODE_SELECT);
     }
 }

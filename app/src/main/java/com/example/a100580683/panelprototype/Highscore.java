@@ -7,13 +7,11 @@ package com.example.a100580683.panelprototype;
 public class Highscore {
     private long id;
     private int levelNo;
-    private String name;
     private int turns;
 
 
-    Highscore(int levelNo, String name, int turns){
+    Highscore(int levelNo, int turns){
         setLevelNo(levelNo);
-        setName(name);
         setTurns(turns);
     }
 
@@ -33,14 +31,6 @@ public class Highscore {
         this.levelNo = levelNo;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getTurns() {
         return turns;
     }
@@ -50,6 +40,6 @@ public class Highscore {
     }
 
     public String toString(){
-        return name + " " + turns;
+        return Integer.toString(turns);
     }
 }

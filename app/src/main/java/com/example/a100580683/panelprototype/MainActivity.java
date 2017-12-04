@@ -241,6 +241,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void endGame(View view){
+        Intent result = new Intent(Intent.ACTION_PICK);
+        setResult(turns);
+        finish();
         finish();
     }
 
