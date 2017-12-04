@@ -51,4 +51,13 @@
             android:layout_height="match_parent" />
     </TableLayout>
 
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:text="Download Level" />
+
 </RelativeLayout>
