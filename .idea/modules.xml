@@ -3,8 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PanelFlipPuzzleGame.iml" filepath="$PROJECT_DIR$/PanelFlipPuzzleGame.iml" />
-      <module fileurl="file://C:/Users/Scott/Documents/Android Projects/PanelFlipPuzzleGame/PanelPrototype.iml" filepath="C:/Users/Scott/Documents/Android Projects/PanelFlipPuzzleGame/PanelPrototype.iml" />
+      <module fileurl="file://C:\Users\100587671\Desktop\mobile devices final project\PanelFlipPuzzleGame\PanelFlipPuzzleGame.iml" filepath="C:\Users\100587671\Desktop\mobile devices final project\PanelFlipPuzzleGame\PanelFlipPuzzleGame.iml" />
+      <module fileurl="file://C:\Users\Scott\Documents\Android Projects\PanelFlipPuzzleGame\PanelPrototype.iml" filepath="C:\Users\Scott\Documents\Android Projects\PanelFlipPuzzleGame\PanelPrototype.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\100587671\Desktop\mobile devices final project\PanelFlipPuzzleGame\app\app.iml" filepath="C:\Users\100587671\Desktop\mobile devices final project\PanelFlipPuzzleGame\app\app.iml" />
     </modules>
   </component>
 </project>
