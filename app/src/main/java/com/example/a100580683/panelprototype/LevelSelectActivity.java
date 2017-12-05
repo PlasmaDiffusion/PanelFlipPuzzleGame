@@ -55,16 +55,14 @@ private HighscoreDB scoreDB;
     public void onActivityResult(int requestCode, int responseCode, Intent data){
         if(requestCode == QCODE_SELECT){
             if(responseCode == RCODE_START){
-                //Once we get the gameplay working, start this activity for result
-                //The activity will return the number of turns taken (Or -1 if they quit)
+                SoundManager.playSound(0);
                 Intent intent = new Intent(this, MainActivity.class);
-                //Do something here to tell the MainActivity which level to load
                 intent.putExtra("LevelImage",levels[levelSelected -1]);
                 startActivityForResult(intent, QCODE_PLAY);
             }
             else if(responseCode == RCODE_SCORE){
-                //Later, send an array of scores from the SQLite database
                 if(scoreDB.getScore(levelSelected).length > 0) {
+                    SoundManager.playSound(0);
                     Intent intent = new Intent(this, ScoreActivity.class);
                     intent.putExtra("Scores", scoreDB.getScore(levelSelected));
                     startActivityForResult(intent, QCODE_SCORE);

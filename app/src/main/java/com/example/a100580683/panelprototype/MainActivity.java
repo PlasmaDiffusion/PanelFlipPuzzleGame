@@ -153,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void flipPanel(View source)
     {
+        SoundManager.playSound(1);
         int clickedPanelID = source.getId();
 
         int clickedPanelNumber = 0;
