@@ -58,6 +58,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="42dp"
-        android:text="Download Level" />
+        android:text="Download Level"
+        android:onClick="goToDownload"/>
 
 </RelativeLayout>

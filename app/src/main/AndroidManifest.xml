@@ -35,6 +35,10 @@
         <activity android:name=".LevelPreviewActivity">
 
         </activity>
+        <activity android:name=".DownloadLevelActivity">
+
+        </activity>
+
     </application>
 
 </manifest>

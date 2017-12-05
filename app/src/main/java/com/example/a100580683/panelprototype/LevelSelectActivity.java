@@ -73,4 +73,11 @@ public class LevelSelectActivity extends AppCompatActivity {
         }
 
     }
+
+
+    public void goToDownload(View source)
+    {
+        Intent intent = new Intent(this, DownloadLevelActivity.class);
+        startActivity(intent);
+    }
 }
