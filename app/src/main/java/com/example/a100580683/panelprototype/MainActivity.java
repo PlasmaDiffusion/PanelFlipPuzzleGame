@@ -114,12 +114,12 @@ public class MainActivity extends AppCompatActivity {
             //Detect if its an orange panel
             if (startingLayout.charAt(i) == 'o') {
 
-                panel.setBackgroundColor(Color.parseColor("#f69256"));
-                panel.setText("O");
+                //panel.setBackgroundColor(Color.parseColor("#f69256"));
+                panel.setText("");
                 panel.toggle();
 
             } else //If not its blue
-                panel.setBackgroundColor(Color.parseColor("#1d4e89"));
+                //panel.setBackgroundColor(Color.parseColor("#1d4e89"));
 
             //Set win condition indicator
             if (winLayout.charAt(i) == 'x')
@@ -143,9 +143,9 @@ public class MainActivity extends AppCompatActivity {
         //Set panels to whatever colour they should be and also display the win requirements.
         for(int i= 0; i < 25; i++){
             panel = (ToggleButton) findViewById((panelIDs[i]));
-            panel.setText("X");
-            panel.setTextOn("O");
-            panel.setTextOff("X");
+            panel.setText("");
+            panel.setTextOn("");
+            panel.setTextOff("");
 
 
         }
@@ -204,10 +204,10 @@ public class MainActivity extends AppCompatActivity {
             panel = (ToggleButton)findViewById(panelIDs[i]);
 
             if(panel.isChecked()){
-                panel.setBackgroundColor(Color.parseColor("#f69256"));
+                //panel.setBackgroundColor(Color.parseColor("#f69256"));
 
             }else{
-                panel.setBackgroundColor(Color.parseColor("#1d4e89"));
+                //panel.setBackgroundColor(Color.parseColor("#1d4e89"));
             }
         }
 

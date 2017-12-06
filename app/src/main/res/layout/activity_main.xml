@@ -32,6 +32,7 @@
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
                 android:textOff="@string/blank"
+                android:background="@drawable/pannel"
 
                 />
 
@@ -42,7 +43,10 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank"
+
+                android:background="@drawable/pannel"
+                />
 
 
             <ToggleButton
@@ -52,7 +56,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton3"
@@ -61,7 +65,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton4"
@@ -70,7 +74,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
         </TableRow>
 
         <TableRow
@@ -85,7 +89,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton6"
@@ -94,7 +98,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton7"
@@ -103,7 +107,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton8"
@@ -112,7 +116,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton9"
@@ -121,7 +125,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
         </TableRow>
 
         <TableRow
@@ -135,7 +139,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton11"
@@ -144,7 +148,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton12"
@@ -153,7 +157,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton13"
@@ -162,7 +166,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton14"
@@ -171,7 +175,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
         </TableRow>
 
         <TableRow
@@ -185,7 +189,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton16"
@@ -194,7 +198,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton17"
@@ -203,7 +207,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton18"
@@ -212,7 +216,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton19"
@@ -221,7 +225,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
         </TableRow>
 
         <TableRow
@@ -235,7 +239,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton21"
@@ -244,7 +248,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton22"
@@ -253,7 +257,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton23"
@@ -262,7 +266,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
 
             <ToggleButton
                 android:id="@+id/toggleButton24"
@@ -271,7 +275,7 @@
                 android:checked="false"
                 android:onClick="flipPanel"
                 android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
+                android:textOff="@string/blank" android:background="@drawable/pannel"/>
         </TableRow>
     </TableLayout>
 
