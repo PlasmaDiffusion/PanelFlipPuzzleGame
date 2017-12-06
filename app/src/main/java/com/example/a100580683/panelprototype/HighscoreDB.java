@@ -64,26 +64,30 @@ public class HighscoreDB extends SQLiteOpenHelper {
         String[] whereArgs = new String[] { "" + lev };
         //Figure out how to format the orderBy string
         Cursor cursor = db.query(TABLE, columns, where, whereArgs, "", "", "turns ASC");
+
         if(cursor.getCount() > 0) {
             scores = new Highscore[cursor.getCount()];
             scoreStrings = new String[cursor.getCount()];
+
+            cursor.moveToFirst();
+
+            for(int i= 0; i < cursor.getCount(); i++) {
+                int ide = cursor.getInt(0);
+                int lvl = cursor.getInt(1);
+                int trn = cursor.getInt(2);
+                scores[i] = new Highscore(lvl, trn);
+                scores[i].setId(ide);
+
+                Log.i("ToString", scores[i].toString());
+                scoreStrings[i] = scores[i].toString();
+                cursor.moveToNext();
+            }
         }
 
 
-        cursor.moveToFirst();
 
-        for(int i= 0; i < cursor.getCount(); i++) {
-            int ide = cursor.getInt(0);
-            int lvl = cursor.getInt(1);
-            int trn = cursor.getInt(2);
-            scores[i] = new Highscore(lvl, trn);
-            scores[i].setId(ide);
-
-            Log.i("ToString", scores[i].toString());
-            scoreStrings[i] = scores[i].toString();
-            cursor.moveToNext();
-        }
             cursor.close();
+
 
             return scoreStrings;
     }

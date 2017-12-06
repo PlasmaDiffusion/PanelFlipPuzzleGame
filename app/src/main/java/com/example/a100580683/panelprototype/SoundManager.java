@@ -43,7 +43,6 @@ public class SoundManager extends Application {
     }
 
     public static void playSound(int id){
-        Log.i("Sound", Integer.toString(id));
         soundManager.play(soundFx[id], 1f, 1f,0, 0, 1f);
     }
 }

@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
             if (startingLayout.charAt(i) == 'o') {
 
                 //panel.setBackgroundColor(Color.parseColor("#f69256"));
-                panel.setText("");
+                //panel.setText("");
                 panel.toggle();
 
             } else //If not its blue
@@ -158,11 +158,10 @@ public class MainActivity extends AppCompatActivity {
         //Set panels to whatever colour they should be and also display the win requirements.
         for(int i= 0; i < 25; i++){
             panel = (ToggleButton) findViewById((panelIDs[i]));
-            panel.setText("");
-            panel.setTextOn("");
-            panel.setTextOff("");
-
-
+            panel.setChecked(false);
+            panel.setText("[]");
+            panel.setTextOn("[]");
+            panel.setTextOff("[]");
         }
     }
 
@@ -260,8 +259,19 @@ public class MainActivity extends AppCompatActivity {
         Intent result = new Intent(Intent.ACTION_PICK);
         setResult(turns);
         finish();
-        finish();
     }
 
+    public void resetGame(View view){
+        turns = 0;
+        turnDisplay.setText("Flips: " + turns);
+        initPanels();
+        loadLevel(level);
+    }
+
+    public void quitGame(View view){
+        Intent result = new Intent(Intent.ACTION_PICK);
+        setResult(0);
+        finish();
+    }
 
 }

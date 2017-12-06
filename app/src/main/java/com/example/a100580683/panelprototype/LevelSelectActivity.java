@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import java.util.Random;
@@ -61,19 +62,21 @@ private HighscoreDB scoreDB;
                 startActivityForResult(intent, QCODE_PLAY);
             }
             else if(responseCode == RCODE_SCORE){
-                if(scoreDB.getScore(levelSelected).length > 0) {
+                if(scoreDB.getScore(levelSelected) != null) {
                     SoundManager.playSound(0);
                     Intent intent = new Intent(this, ScoreActivity.class);
                     intent.putExtra("Scores", scoreDB.getScore(levelSelected));
                     startActivityForResult(intent, QCODE_SCORE);
+                }else{
+                    Toast toast = Toast.makeText(getApplicationContext(),"No scores available for this level", Toast.LENGTH_SHORT);
+                    toast.show();
                 }
             }
         }
         else if(requestCode == QCODE_SCORE) {
             //When the score is closed, re-open the level preview
-            if(responseCode != -1) {
+            if(responseCode != 0) {
             scoreDB.clearLevel(levelSelected);
-
             }
             previewLevel();
         }

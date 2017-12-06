@@ -3,6 +3,7 @@ package com.example.a100580683.panelprototype;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -21,9 +22,7 @@ public class ScoreActivity extends AppCompatActivity {
         Bundle retrieve = getIntent().getExtras();
 
         ListView scoreContainer = (ListView)findViewById(R.id.lstScores);
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, retrieve.getStringArray("Scores"));
-
         scoreContainer.setAdapter(adapter);
 
 
