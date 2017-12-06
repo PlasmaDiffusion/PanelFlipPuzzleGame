@@ -29,8 +29,9 @@ public class MainActivity extends AppCompatActivity {
     private int turns = 0;
 
     private int level = 0;
+    private boolean downloaded = false;
 
-    private Bitmap outline;
+    private Bitmap downloadedImage;
     private Handler handler;
 
     @Override
@@ -44,6 +45,16 @@ public class MainActivity extends AppCompatActivity {
 
         level = callingIntent.getIntExtra("LevelImage", 0);
 
+        downloaded = callingIntent.getBooleanExtra("downloaded", false);
+
+
+        if (downloaded)
+        {
+            byte[] byteArray = getIntent().getByteArrayExtra("Image");
+            downloadedImage = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+
+        }
+
         loadLevel(level);
 
 
@@ -52,10 +63,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadLevel(int levelImageID) {
 
-        Bitmap level1Image;
+        Bitmap levelImage;
 
-        level1Image = BitmapFactory.decodeResource(getResources(), levelImageID);
-        level1Image = Bitmap.createScaledBitmap(level1Image, 50, 110, false);
+        //Either get an image from a resource, or get a downloaded image sent from a parcel
+        if (downloaded) levelImage = downloadedImage;
+        else levelImage = BitmapFactory.decodeResource(getResources(), levelImageID);
+
+
+        levelImage = Bitmap.createScaledBitmap(levelImage, 50, 110, false);
 
 
 
@@ -67,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
 
-                int pixel = level1Image.getPixel((j * 10) + 5, (i * 10) + 5);
+                int pixel = levelImage.getPixel((j * 10) + 5, (i * 10) + 5);
                 int redValue = Color.red(pixel);
                 int blueValue = Color.blue(pixel);
                 int greenValue = Color.green(pixel);
@@ -93,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             for (int j = 0; j < 5; j++) {
 
 
-                int pixel = level1Image.getPixel( 5 + (j * 10), 5 + (i + 6) * 10);
+                int pixel = levelImage.getPixel( 5 + (j * 10), 5 + (i + 6) * 10);
                 int redValue = Color.red(pixel);
                 int blueValue = Color.blue(pixel);
                 int greenValue = Color.green(pixel);

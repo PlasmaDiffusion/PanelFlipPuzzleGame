@@ -91,4 +91,11 @@ private HighscoreDB scoreDB;
         intent.putExtra("LevelImage",levels[levelSelected -1]);
         startActivityForResult(intent, QCODE_SELECT);
     }
+
+
+    public void goToDownload(View source)
+    {
+        Intent intent = new Intent(this, DownloadLevelActivity.class);
+        startActivity(intent);
+    }
 }
