@@ -47,10 +47,11 @@ public class DownloadLevelActivity extends AppCompatActivity
         EditText inputText;
 
         inputText = (EditText)findViewById(R.id.urlEditText);
+        String url = "https://i.imgur.com/" + inputText.getText().toString() + ".png";
 
         DownloadImageTask downloadableImage = new DownloadImageTask(image, playButton);
 
-        downloadableImage.execute(inputText.getText().toString());
+        downloadableImage.execute(url);
 
 
     }
