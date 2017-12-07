@@ -29,6 +29,7 @@ public class MenuActivity extends AppCompatActivity{
     }
 
     public void showTutorial(View view){
+        SoundManager.playSound(3);
         Intent intent = new Intent(this, HelpActivity.class);
         startActivity(intent);
     }

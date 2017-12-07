@@ -29,12 +29,14 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     public void closeScores(View view){
+        SoundManager.playSound(3);
         Intent result = new Intent(Intent.ACTION_PICK);
         setResult(0);
         finish();
     }
 
     public void deleteScores(View view){
+        SoundManager.playSound(2);
         Intent result = new Intent(Intent.ACTION_PICK);
         setResult(1);
         finish();

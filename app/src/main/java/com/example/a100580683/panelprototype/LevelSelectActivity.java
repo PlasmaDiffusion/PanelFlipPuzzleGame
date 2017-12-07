@@ -62,6 +62,7 @@ private HighscoreDB scoreDB;
                 startActivityForResult(intent, QCODE_PLAY);
             }
             else if(responseCode == RCODE_SCORE){
+                SoundManager.playSound(3);
                 if(scoreDB.getScore(levelSelected) != null) {
                     SoundManager.playSound(0);
                     Intent intent = new Intent(this, ScoreActivity.class);
@@ -76,19 +77,24 @@ private HighscoreDB scoreDB;
         else if(requestCode == QCODE_SCORE) {
             //When the score is closed, re-open the level preview
             if(responseCode != 0) {
+                SoundManager.playSound(2);
             scoreDB.clearLevel(levelSelected);
             }
             previewLevel();
         }
         else if(requestCode == QCODE_PLAY){
-            Log.i("Restul", responseCode + "");
-            if(responseCode != 0)
-            scoreDB.createScore(levelSelected,responseCode);
+            if(responseCode != 0) {
+                SoundManager.playSound(4);
+                scoreDB.createScore(levelSelected, responseCode);
+                Toast toast = Toast.makeText(getApplicationContext(),"Level completed in " + responseCode + " turns!", Toast.LENGTH_SHORT);
+                toast.show();
+            }
         }
 
     }
 
     void previewLevel(){
+        SoundManager.playSound(3);
         Intent intent = new Intent(this, LevelPreviewActivity.class);
         intent.putExtra("LevelNo",levelSelected);
         intent.putExtra("LevelImage",levels[levelSelected -1]);
@@ -98,6 +104,7 @@ private HighscoreDB scoreDB;
 
     public void goToDownload(View source)
     {
+        SoundManager.playSound(3);
         Intent intent = new Intent(this, DownloadLevelActivity.class);
         startActivity(intent);
     }

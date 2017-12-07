@@ -58,6 +58,7 @@ public class DownloadLevelActivity extends AppCompatActivity
 
     public void play(View source)
     {
+        SoundManager.playSound(0);
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("LevelImage", R.id.downloadedPreviewImageView);
         intent.putExtra("downloaded", true);
@@ -86,6 +87,7 @@ public class DownloadLevelActivity extends AppCompatActivity
 
     public void cancel(View source)
     {
+        SoundManager.playSound(2);
         finish();
     }
 }

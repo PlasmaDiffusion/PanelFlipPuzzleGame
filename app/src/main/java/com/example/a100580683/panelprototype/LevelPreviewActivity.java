@@ -51,6 +51,7 @@ public class LevelPreviewActivity extends AppCompatActivity {
     }
 
     public void cancelSelect(View view){
+        SoundManager.playSound(2);
         Intent result = new Intent(Intent.ACTION_PICK);
         setResult(-1);
         finish();
