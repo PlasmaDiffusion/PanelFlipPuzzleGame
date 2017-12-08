@@ -24,7 +24,7 @@ import android.graphics.RectF;
 public class MainActivity extends AppCompatActivity {
 
     private int[] panelIDs;// = new int[25];
-    private String winLayout; // 0 = off (blue), 1 = on (orange), 2 = doesn't matter
+    private String winLayout; // x = off (blue), o = on (orange), - = doesn't matter
     private TextView turnDisplay;
     private int turns = 0;
 
@@ -69,9 +69,15 @@ public class MainActivity extends AppCompatActivity {
         if (downloaded) levelImage = downloadedImage;
         else levelImage = BitmapFactory.decodeResource(getResources(), levelImageID);
 
-
+        //Level image is the image we'll reference to build the level
         levelImage = Bitmap.createScaledBitmap(levelImage, 50, 110, false);
 
+
+        //Assign target reference image
+        Bitmap targetImage = Bitmap.createBitmap(levelImage, 0, 0, 50, 50);
+
+        ImageView image = (ImageView)findViewById(R.id.targetImage);
+        image.setImageBitmap(targetImage);
 
 
         final int onColour = 255 + 106 + 0;
@@ -141,6 +147,12 @@ public class MainActivity extends AppCompatActivity {
                 panel.setTextColor(getResources().getColor(R.color.colorOffLight));
             else if (winLayout.charAt(i) == 'o')
                 panel.setTextColor(getResources().getColor(R.color.colorOnDark));
+
+            else { //Panels will have no text on them
+                panel.setText("");
+                panel.setTextOn("");
+                panel.setTextOff("");
+            }
         }
     }
 
@@ -162,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
             panel.setText("[]");
             panel.setTextOn("[]");
             panel.setTextOff("[]");
+
         }
     }
 

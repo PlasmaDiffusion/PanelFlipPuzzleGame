@@ -9,4 +9,6 @@
     <color name="colorOffLight">#3791ff</color>
     <color name="colorOnDark">#a35323</color>
 
+    <color name="bg1">#00fc2e</color>
+
 </resources>

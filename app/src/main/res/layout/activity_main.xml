@@ -4,12 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:background="@drawable/diamond_background_gradient_white"
+    android:backgroundTint="@color/bg1"
+    android:backgroundTintMode="multiply"
+
     tools:context="com.example.a100580683.panelprototype.MainActivity">
+
+    <ImageView
+        android:id="@+id/targetImage"
+        android:layout_width="143dp"
+        android:layout_height="103dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/alert_dark_frame" />
 
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="368dp"
-        android:layout_height="452dp"
+        android:layout_height="411dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -304,9 +321,18 @@
 
     <TextView
         android:id="@+id/txt_Turns"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Flips:" />
+        android:layout_width="92dp"
+        android:layout_height="56dp"
+        android:shadowColor="@android:color/darker_gray"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:singleLine="false"
+        android:text="Flips:"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:shadowColor="@android:color/background_dark" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
