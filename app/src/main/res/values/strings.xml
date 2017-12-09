@@ -2,4 +2,23 @@
     <string name="app_name">Tile Flippers</string>
     <string name="togglebutton">ToggleButton</string>
     <string name="blank" />
+    <string name="btn_lbl_OK">OK</string>
+    <string name="lbl_hnt_code">Level Code</string>
+    <string name="btn_lbl_download">Download</string>
+    <string name="btn_lbl_back">Back</string>
+    <string name="btn_lbl_play">Play</string>
+    <string name="btn_lbl_tutorial">Instructions</string>
+    <string name="btn_lbl_start">Start</string>
+    <string name="btn_lbl_scores">Scores</string>
+    <string name="btn_lbl_erasescores">Erase Scores</string>
+    <string name="lbl_select">Select a Level</string>
+    <string name="btn_lbl_downloadlvl">Download Level</string>
+    <string name="lvl_1">1</string>
+    <string name="lvl_2">2</string>
+    <string name="lvl_3">3</string>
+    <string name="restlt1">Level Completed in </string>
+    <string name="result2">turns!</string>
+    <string name="noscre">No scores available for this level</string>
+    <string name="turnlbl">Turns:</string>
+    <string name="lvl_demo">Ex: ZNaNSMU</string>
 </resources>

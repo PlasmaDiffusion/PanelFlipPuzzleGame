@@ -15,6 +15,7 @@ public class HelpActivity extends AppCompatActivity {
     }
 
     public void closeTutorial(View view){
+        SoundManager.playSound(2);
         finish();
     }
 }

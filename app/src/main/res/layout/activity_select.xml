@@ -17,7 +17,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:onClick="selectLevel"
-                android:text="1" />
+                android:text="@string/lvl_1" />
 
             <Button
                 android:id="@+id/button13"
@@ -26,7 +26,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:onClick="selectLevel"
-                android:text="2" />
+                android:text="@string/lvl_2" />
 
             <Button
                 android:id="@+id/button12"
@@ -35,7 +35,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:onClick="selectLevel"
-                android:text="3" />
+                android:text="@string/lvl_3" />
         </TableRow>
 
         <TableRow
@@ -58,7 +58,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="42dp"
-        android:text="Download Level"
+        android:text="@string/btn_lbl_downloadlvl"
         android:onClick="goToDownload"/>
 
     <TextView
@@ -67,6 +67,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Select a Level" />
+        android:text="@string/lbl_select" />
 
 </RelativeLayout>

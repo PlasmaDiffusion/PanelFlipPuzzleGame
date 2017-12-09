@@ -40,7 +40,6 @@ public class HighscoreDB extends SQLiteOpenHelper {
     public Highscore createScore(int level, int turns){
         Highscore toAdd = new Highscore(level, turns);
 
-        Log.i("Turns", Integer.toString(turns));
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues newValues = new ContentValues();

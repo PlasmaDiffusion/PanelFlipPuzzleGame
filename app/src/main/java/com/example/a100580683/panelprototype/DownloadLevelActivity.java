@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 
@@ -21,6 +22,8 @@ import java.io.ByteArrayOutputStream;
 
 public class DownloadLevelActivity extends AppCompatActivity
 {
+    final int QCODE_PLAY = 300;
+
     private DownloadImageTask downloadableImage;
 
     private Bitmap bitmap;
@@ -81,10 +84,17 @@ public class DownloadLevelActivity extends AppCompatActivity
         byte[] byteArray = bStream.toByteArray();
         intent.putExtra("Image", byteArray);
 
-        startActivity(intent);
+        startActivityForResult(intent, QCODE_PLAY);
 
     }
 
+    public void onActivityResult(int requestCode, int responseCode, Intent data){
+        if(requestCode == QCODE_PLAY && responseCode > 0){
+            SoundManager.playSound(4);
+            Toast toast = Toast.makeText(getApplicationContext(),"Level completed in " + responseCode + " " + " turns!", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+    }
     public void cancel(View source)
     {
         SoundManager.playSound(2);

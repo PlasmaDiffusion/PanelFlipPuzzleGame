@@ -69,7 +69,7 @@ private HighscoreDB scoreDB;
                     intent.putExtra("Scores", scoreDB.getScore(levelSelected));
                     startActivityForResult(intent, QCODE_SCORE);
                 }else{
-                    Toast toast = Toast.makeText(getApplicationContext(),"No scores available for this level", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(getApplicationContext(),R.string.noscre, Toast.LENGTH_SHORT);
                     toast.show();
                 }
             }
@@ -86,7 +86,7 @@ private HighscoreDB scoreDB;
             if(responseCode != 0) {
                 SoundManager.playSound(4);
                 scoreDB.createScore(levelSelected, responseCode);
-                Toast toast = Toast.makeText(getApplicationContext(),"Level completed in " + responseCode + " turns!", Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(getApplicationContext(),"Level completed in " + responseCode + " " + " turns!", Toast.LENGTH_SHORT);
                 toast.show();
             }
         }
