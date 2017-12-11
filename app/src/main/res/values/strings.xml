@@ -21,4 +21,19 @@
     <string name="noscre">No scores available for this level</string>
     <string name="turnlbl">Turns:</string>
     <string name="lvl_demo">Ex: ZNaNSMU</string>
+    <string name="close">Close</string>
+    <string name="press_download">Press the download button, and if it succeeds you\'ll be able to press play!</string>
+    <string name="code_example">Copy this part of the url to use as a download code: ZNaNSMU</string>
+    <string name="url_example">The image url will look something like this: https://imgur.com/ZNaNSMU</string>
+    <string name="image_details">Upload your level onto imgur. Make sure you save its as a 50x110 png.</string>
+    <string name="uploading_a_level">Uploading a Level</string>
+    <string name="downloading_a_level">Downloading a Level</string>
+    <string name="next">Next</string>
+    <string name="create_your_own_level">You can create your own level by creating and uploading an image!</string>
+    <string name="template_link">Use this image as a template: https://i.imgur.com/ZNaNSMU.png</string>
+    <string name="image_functionality">The top half of the image represents the pattern required to beat the level. (White means the tile won\'t matter)</string>
+    <string name="creating_a_level_image">Creating a Level Image</string>
+    <string name="image_functionality2">The bottom half represents the starting panel layout. It can be any combination of orange and blue.</string>
+    <string name="help">Help</string>
+    <string name="lvl_4">4</string>
 </resources>

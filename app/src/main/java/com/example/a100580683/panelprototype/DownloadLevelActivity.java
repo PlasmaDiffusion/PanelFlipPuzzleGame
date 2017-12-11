@@ -95,6 +95,14 @@ public class DownloadLevelActivity extends AppCompatActivity
             toast.show();
         }
     }
+
+    public void openHelp(View source)
+    {
+        Intent intent = new Intent(this, DownloadHelpActivity.class);
+
+        startActivity(intent);
+    }
+
     public void cancel(View source)
     {
         SoundManager.playSound(2);

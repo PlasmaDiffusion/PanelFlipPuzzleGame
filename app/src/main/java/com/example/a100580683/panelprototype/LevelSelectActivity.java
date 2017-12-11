@@ -3,13 +3,9 @@ package com.example.a100580683.panelprototype;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import android.widget.ToggleButton;
-
-import java.util.Random;
 
 /**
  * Created by 100585588 on 12/3/2017.
@@ -34,7 +30,7 @@ private HighscoreDB scoreDB;
 
         levels = new int[]
                 {
-                R.raw.level1, R.raw.level2, R.raw.level3
+                R.raw.level1, R.raw.level2, R.raw.level3, R.raw.level4
         };
 
         scoreDB = new HighscoreDB(this);

@@ -39,6 +39,11 @@
 
         </activity>
 
+    <activity android:name=".DownloadHelpActivity">
+
+    </activity>
+
+
     </application>
 
 </manifest>
