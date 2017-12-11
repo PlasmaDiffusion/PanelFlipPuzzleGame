@@ -36,4 +36,15 @@
     <string name="image_functionality2">The bottom half represents the starting panel layout. It can be any combination of orange and blue.</string>
     <string name="help">Help</string>
     <string name="lvl_4">4</string>
+    <string name="lvl_5">5</string>
+    <string name="lvl_6">6</string>
+    <string name="lvl_7">7</string>
+    <string name="lvl_8">8</string>
+
+    <string-array name = "Levels">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
 </resources>

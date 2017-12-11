@@ -22,6 +22,7 @@ private HighscoreDB scoreDB;
     final int RCODE_CANCEL = -1;
 
     int[] levels;
+   int[] buttons;
 
     int levelSelected = -1;
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +31,15 @@ private HighscoreDB scoreDB;
 
         levels = new int[]
                 {
-
                 R.raw.level1, R.raw.level2, R.raw.level3, R.raw.level4, R.raw.level5, R.raw.level6, R.raw.level7, R.raw.level8
+        };
 
-
+        buttons = new int[]{
+          R.id.button, R.id.button13,R.id.button12, R.id.button14,R.id.button2, R.id.button21, R.id.button23, R.id.button24
         };
 
         scoreDB = new HighscoreDB(this);
-
+        updateButtons();
     }
 
     public void selectLevel(View view){
@@ -87,9 +89,10 @@ private HighscoreDB scoreDB;
                 scoreDB.createScore(levelSelected, responseCode);
                 Toast toast = Toast.makeText(getApplicationContext(),"Level completed in " + responseCode + " " + " turns!", Toast.LENGTH_SHORT);
                 toast.show();
+
             }
         }
-
+        updateButtons();
     }
 
     void previewLevel(){
@@ -106,5 +109,17 @@ private HighscoreDB scoreDB;
         SoundManager.playSound(3);
         Intent intent = new Intent(this, DownloadLevelActivity.class);
         startActivity(intent);
+    }
+
+    void updateButtons(){
+        for(int i = 0; i < levels.length; i++){
+            Button check = (Button)findViewById(buttons[i]);
+            if(scoreDB.getScore(i + 1) != null){
+                check.setBackground(getResources().getDrawable(R.drawable.buttonclear));
+            }
+            else{
+                check.setBackground(getResources().getDrawable(R.drawable.buttonnew));
+            }
+        }
     }
 }

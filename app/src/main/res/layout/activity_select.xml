@@ -39,8 +39,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:onClick="selectLevel"
-
-                android:text="3" />
+                android:text="@string/lvl_3" />
 
 
             <Button
@@ -50,7 +49,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:onClick="selectLevel"
-                android:text="4" />
+                android:text="@string/lvl_4" />
 
 
 
@@ -67,7 +66,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:onClick="selectLevel"
-            android:text="5" />
+            android:text="@string/lvl_5" />
 
         <Button
             android:id="@+id/button21"
@@ -76,7 +75,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:onClick="selectLevel"
-            android:text="6" />
+            android:text="@string/lvl_6" />
 
             <Button
                 android:id="@+id/button23"
@@ -85,7 +84,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:onClick="selectLevel"
-                android:text="7" />
+                android:text="@string/lvl_7" />
 
             <Button
                 android:id="@+id/button24"
@@ -94,7 +93,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:onClick="selectLevel"
-                android:text="8" />
+                android:text="@string/lvl_8" />
 
 
 
