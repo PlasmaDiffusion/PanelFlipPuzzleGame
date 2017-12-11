@@ -171,9 +171,9 @@ public class MainActivity extends AppCompatActivity {
         for(int i= 0; i < 25; i++){
             panel = (ToggleButton) findViewById((panelIDs[i]));
             panel.setChecked(false);
-            panel.setText("[]");
-            panel.setTextOn("[]");
-            panel.setTextOff("[]");
+            panel.setText("");
+            panel.setTextOn("");
+            panel.setTextOff("");
 
         }
     }
@@ -240,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
 
         turns++;
 
-        turnDisplay.setText("Flips: " + turns);
+        turnDisplay.setText( "Turns:" + turns);
 
         if(checkIfWon()) endGame(source);
 
@@ -276,7 +276,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void resetGame(View view){
         turns = 0;
-        turnDisplay.setText("Flips: " + turns);
+        turnDisplay.setText( "Turns:" + turns);
         initPanels();
         loadLevel(level);
     }

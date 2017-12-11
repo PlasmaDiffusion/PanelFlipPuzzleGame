@@ -10,7 +10,7 @@
         android:id="@+id/btn_Start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
+        android:text="@string/btn_lbl_play"
         android:onClick="startGame"
             android:layout_marginBottom="51dp"
             android:layout_alignBottom="@+id/btn_Help"
@@ -20,7 +20,7 @@
         android:id="@+id/btn_Help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Instructions"
+        android:text="@string/btn_lbl_tutorial"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="72dp"
@@ -33,7 +33,7 @@
         android:layout_above="@+id/btn_Start"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="52dp"
-        app:srcCompat="@drawable/title" />
+        app:srcCompat="@drawable/splash" />
 
 
     </RelativeLayout>

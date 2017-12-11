@@ -3,13 +3,9 @@ package com.example.a100580683.panelprototype;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import android.widget.ToggleButton;
-
-import java.util.Random;
 
 /**
  * Created by 100585588 on 12/3/2017.
@@ -34,7 +30,10 @@ private HighscoreDB scoreDB;
 
         levels = new int[]
                 {
+
                 R.raw.level1, R.raw.level2, R.raw.level3, R.raw.level4, R.raw.level5, R.raw.level6, R.raw.level7, R.raw.level8
+
+
         };
 
         scoreDB = new HighscoreDB(this);
@@ -69,7 +68,7 @@ private HighscoreDB scoreDB;
                     intent.putExtra("Scores", scoreDB.getScore(levelSelected));
                     startActivityForResult(intent, QCODE_SCORE);
                 }else{
-                    Toast toast = Toast.makeText(getApplicationContext(),"No scores available for this level", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(getApplicationContext(),R.string.noscre, Toast.LENGTH_SHORT);
                     toast.show();
                 }
             }
@@ -86,7 +85,7 @@ private HighscoreDB scoreDB;
             if(responseCode != 0) {
                 SoundManager.playSound(4);
                 scoreDB.createScore(levelSelected, responseCode);
-                Toast toast = Toast.makeText(getApplicationContext(),"Level completed in " + responseCode + " turns!", Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(getApplicationContext(),"Level completed in " + responseCode + " " + " turns!", Toast.LENGTH_SHORT);
                 toast.show();
             }
         }

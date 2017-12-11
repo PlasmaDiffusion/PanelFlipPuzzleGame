@@ -11,7 +11,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="closeTutorial"
-        android:text="OK" />
+        android:text="@string/btn_lbl_OK" />
 
     <ImageView
         android:id="@+id/imageView2"

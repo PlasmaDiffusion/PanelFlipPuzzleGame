@@ -5,16 +5,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 /**
- * Created by 100585588 on 12/2/2017.
+ * Created by Scott on 12/2/2017.
  */
 
-public class HelpActivity extends AppCompatActivity {
+public class DownloadHelpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_help);
+        setContentView(R.layout.activity_download_help);
     }
 
-    public void closeTutorial(View view){
+    public void next(View view){
+        SoundManager.playSound(2);
+        setContentView(R.layout.activity_download_help2);
+    }
+
+    public void close(View view){
         SoundManager.playSound(2);
         finish();
     }
