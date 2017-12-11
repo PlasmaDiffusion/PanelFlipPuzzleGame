@@ -33,7 +33,7 @@
         android:layout_above="@+id/btn_Start"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="52dp"
-        app:srcCompat="@drawable/title" />
+        app:srcCompat="@drawable/splash" />
 
 
     </RelativeLayout>
