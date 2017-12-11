@@ -30,7 +30,7 @@ private HighscoreDB scoreDB;
 
         levels = new int[]
                 {
-                R.raw.level1, R.raw.level2, R.raw.level3, R.raw.level4
+                R.raw.level1, R.raw.level2
         };
 
         scoreDB = new HighscoreDB(this);
