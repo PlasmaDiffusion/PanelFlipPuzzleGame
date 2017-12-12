@@ -45,7 +45,7 @@
             android:layout_height="match_parent">
 
             <ToggleButton
-                android:id="@+id/toggleButton0"
+                android:id="@+id/tgl_11"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -57,7 +57,7 @@
                 />
 
             <ToggleButton
-                android:id="@+id/toggleButton1"
+                android:id="@+id/tgl_12"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -69,7 +69,7 @@
 
 
             <ToggleButton
-                android:id="@+id/toggleButton2"
+                android:id="@+id/tgl_13"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -79,7 +79,7 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton3"
+                android:id="@+id/tgl_14"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -89,7 +89,7 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton4"
+                android:id="@+id/tgl_15"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -105,7 +105,7 @@
             android:orientation="vertical">
 
             <ToggleButton
-                android:id="@+id/toggleButton5"
+                android:id="@+id/tgl_21"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -115,7 +115,7 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton6"
+                android:id="@+id/tgl_22"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -125,7 +125,7 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton7"
+                android:id="@+id/tgl_23"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -135,7 +135,7 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton8"
+                android:id="@+id/tgl_24"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -145,62 +145,7 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton9"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/pannel"
-                android:checked="false"
-                android:onClick="flipPanel"
-                android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ToggleButton
-                android:id="@+id/toggleButton10"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/pannel"
-                android:checked="false"
-                android:onClick="flipPanel"
-                android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
-
-            <ToggleButton
-                android:id="@+id/toggleButton11"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/pannel"
-                android:checked="false"
-                android:onClick="flipPanel"
-                android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
-
-            <ToggleButton
-                android:id="@+id/toggleButton12"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/pannel"
-                android:checked="false"
-                android:onClick="flipPanel"
-                android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
-
-            <ToggleButton
-                android:id="@+id/toggleButton13"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/pannel"
-                android:checked="false"
-                android:onClick="flipPanel"
-                android:text="@string/togglebutton"
-                android:textOff="@string/blank" />
-
-            <ToggleButton
-                android:id="@+id/toggleButton14"
+                android:id="@+id/tgl_25"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -215,7 +160,7 @@
             android:layout_height="match_parent">
 
             <ToggleButton
-                android:id="@+id/toggleButton15"
+                android:id="@+id/tgl_31"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -225,7 +170,7 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton16"
+                android:id="@+id/tgl_32"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -235,7 +180,7 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton17"
+                android:id="@+id/tgl_33"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -245,7 +190,7 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton18"
+                android:id="@+id/tgl_34"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -255,7 +200,7 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton19"
+                android:id="@+id/tgl_35"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -270,7 +215,7 @@
             android:layout_height="match_parent">
 
             <ToggleButton
-                android:id="@+id/toggleButton20"
+                android:id="@+id/tgl_41"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -280,7 +225,7 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton21"
+                android:id="@+id/tgl_42"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -290,7 +235,7 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton22"
+                android:id="@+id/tgl_43"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -300,7 +245,7 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton23"
+                android:id="@+id/tgl_44"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -310,7 +255,62 @@
                 android:textOff="@string/blank" />
 
             <ToggleButton
-                android:id="@+id/toggleButton24"
+                android:id="@+id/tgl_45"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/pannel"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff="@string/blank" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ToggleButton
+                android:id="@+id/tgl_51"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/pannel"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff="@string/blank" />
+
+            <ToggleButton
+                android:id="@+id/tgl_52"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/pannel"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff="@string/blank" />
+
+            <ToggleButton
+                android:id="@+id/tgl_53"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/pannel"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff="@string/blank" />
+
+            <ToggleButton
+                android:id="@+id/tgl_54"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/pannel"
+                android:checked="false"
+                android:onClick="flipPanel"
+                android:text="@string/togglebutton"
+                android:textOff="@string/blank" />
+
+            <ToggleButton
+                android:id="@+id/tgl_55"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/pannel"
@@ -362,7 +362,8 @@
         app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toEndOf="@+id/tableLayout"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:background="@drawable/buttonnew"/>
 
 
 </android.support.constraint.ConstraintLayout>

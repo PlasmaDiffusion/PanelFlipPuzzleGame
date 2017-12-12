@@ -11,7 +11,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="next"
-        android:text="@string/next" />
+        android:text="@string/next"
+        android:background="@drawable/buttonnew"/>
 
     <TextView
         android:id="@+id/Lblhelp2"

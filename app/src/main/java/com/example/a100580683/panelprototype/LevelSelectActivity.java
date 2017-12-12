@@ -70,7 +70,7 @@ public class LevelSelectActivity extends AppCompatActivity {
                     intent.putExtra("Scores", scoreDB.getScore(levelSelected));
                     startActivityForResult(intent, QCODE_SCORE);
                 } else {
-                    Toast toast = Toast.makeText(getApplicationContext(), R.string.noscre, Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(getApplicationContext(), R.string.noscore, Toast.LENGTH_SHORT);
                     toast.show();
                 }
             }

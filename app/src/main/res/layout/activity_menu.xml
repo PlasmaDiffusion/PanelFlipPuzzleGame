@@ -13,7 +13,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="51dp"
         android:onClick="startGame"
-        android:text="@string/btn_lbl_play" />
+        android:text="@string/btn_lbl_play"
+        android:background="@drawable/buttonnew"/>
 
     <Button
         android:id="@+id/Btnhelp"
@@ -23,7 +24,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="72dp"
         android:onClick="showTutorial"
-        android:text="@string/btn_lbl_tutorial" />
+        android:text="@string/help"
+        android:background="@drawable/buttonnew"/>
 
     <ImageView
         android:id="@+id/imageView"

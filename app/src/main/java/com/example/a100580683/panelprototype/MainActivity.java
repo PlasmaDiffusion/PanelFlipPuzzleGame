@@ -152,11 +152,11 @@ public class MainActivity extends AppCompatActivity {
     public void initPanels() {
         ToggleButton panel;
 
-        panelIDs = new int[]{R.id.toggleButton0, R.id.toggleButton1, R.id.toggleButton2, R.id.toggleButton3, R.id.toggleButton4,
-                R.id.toggleButton5, R.id.toggleButton6, R.id.toggleButton7, R.id.toggleButton8, R.id.toggleButton9,
-                R.id.toggleButton10, R.id.toggleButton11, R.id.toggleButton12, R.id.toggleButton13, R.id.toggleButton14,
-                R.id.toggleButton15, R.id.toggleButton16, R.id.toggleButton17, R.id.toggleButton18, R.id.toggleButton19,
-                R.id.toggleButton20, R.id.toggleButton21, R.id.toggleButton22, R.id.toggleButton23, R.id.toggleButton24};
+        panelIDs = new int[]{R.id.tgl_11, R.id.tgl_12, R.id.tgl_13, R.id.tgl_14, R.id.tgl_15,
+                R.id.tgl_21, R.id.tgl_22, R.id.tgl_23, R.id.tgl_24, R.id.tgl_25,
+                R.id.tgl_31, R.id.tgl_32, R.id.tgl_33, R.id.tgl_34, R.id.tgl_35,
+                R.id.tgl_41, R.id.tgl_42, R.id.tgl_43, R.id.tgl_44, R.id.tgl_45,
+                R.id.tgl_51, R.id.tgl_52, R.id.tgl_53, R.id.tgl_54, R.id.tgl_55};
 
 
         //Set panels to whatever colour they should be and also display the win requirements.

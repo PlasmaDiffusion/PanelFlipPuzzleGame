@@ -11,7 +11,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:onClick="closeScores"
-        android:text="@string/btn_lbl_back" />
+        android:text="@string/btn_lbl_back"
+        android:background="@drawable/buttonnew"/>
 
     <ListView
         android:id="@+id/lstScores"
@@ -29,5 +30,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:onClick="deleteScores"
-        android:text="@string/btn_lbl_erasescores" />
+        android:text="@string/btn_lbl_erasescores"
+        android:background="@drawable/buttonnew"/>
 </RelativeLayout>
