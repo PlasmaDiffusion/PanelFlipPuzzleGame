@@ -10,7 +10,7 @@ public class Highscore {
     private int turns;
 
 
-    Highscore(int levelNo, int turns){
+    Highscore(int levelNo, int turns) {
         setLevelNo(levelNo);
         setTurns(turns);
     }
@@ -39,7 +39,7 @@ public class Highscore {
         this.turns = turns;
     }
 
-    public String toString(){
+    public String toString() {
         return Integer.toString(turns);
     }
 }

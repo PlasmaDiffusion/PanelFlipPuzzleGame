@@ -14,12 +14,12 @@ public class DownloadHelpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_download_help);
     }
 
-    public void next(View view){
+    public void next(View view) {
         SoundManager.playSound(2);
         setContentView(R.layout.activity_download_help2);
     }
 
-    public void close(View view){
+    public void close(View view) {
         SoundManager.playSound(2);
         finish();
     }

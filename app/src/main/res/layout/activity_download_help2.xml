@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/Btnok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -14,47 +14,47 @@
         android:text="@string/close" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/Lblhelp2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView11"
-        android:layout_marginTop="50dp"
+        android:layout_below="@+id/Lblhelp4"
+        android:layout_marginTop="35dp"
         android:text="@string/press_download"
         android:textAlignment="center" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/Lblhelp5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView10"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Lblhelp3"
+        android:layout_marginTop="23dp"
         android:text="@string/code_example"
         android:textAlignment="center" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/Lblhelp3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView5"
+        android:layout_below="@+id/Lblhelp6"
         android:layout_marginTop="27dp"
         android:text="@string/url_example"
         android:textAlignment="center" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/Lblhelp6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView7"
+        android:layout_below="@+id/Lblhelp1"
         android:layout_marginTop="24dp"
         android:text="@string/image_details"
         android:textAlignment="center" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/Lblhelp1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -64,12 +64,11 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/Lblhelp4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView8"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
+        android:layout_centerVertical="true"
         android:text="@string/downloading_a_level"
         android:textStyle="bold" />
 

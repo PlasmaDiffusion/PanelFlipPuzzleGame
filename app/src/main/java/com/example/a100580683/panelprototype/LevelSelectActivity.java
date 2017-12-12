@@ -12,7 +12,7 @@ import android.widget.Toast;
  */
 
 public class LevelSelectActivity extends AppCompatActivity {
-private HighscoreDB scoreDB;
+    private HighscoreDB scoreDB;
 
     final int QCODE_SELECT = 100;
     final int QCODE_SCORE = 200;
@@ -22,31 +22,32 @@ private HighscoreDB scoreDB;
     final int RCODE_CANCEL = -1;
 
     int[] levels;
-   int[] buttons;
+    int[] buttons;
 
     int levelSelected = -1;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
 
         levels = new int[]
                 {
-                R.raw.level1, R.raw.level2, R.raw.level3, R.raw.level4, R.raw.level5, R.raw.level6, R.raw.level7, R.raw.level8
-        };
+                        R.raw.level1, R.raw.level2, R.raw.level3, R.raw.level4, R.raw.level5, R.raw.level6, R.raw.level7, R.raw.level8
+                };
 
         buttons = new int[]{
-          R.id.button, R.id.button13,R.id.button12, R.id.button14,R.id.button2, R.id.button21, R.id.button23, R.id.button24
+                R.id.Btnlvl1, R.id.Btnlvl2, R.id.Btnlvl3, R.id.Btnlvl4, R.id.Btnstart, R.id.Btnlvl6, R.id.Btnlvl7, R.id.Btnlvl8
         };
 
         scoreDB = new HighscoreDB(this);
         updateButtons();
     }
 
-    public void selectLevel(View view){
+    public void selectLevel(View view) {
         //With multiple levels, put them in a list and use the index to choose the
         //level value, like with the in-game tile select
 
-        Button btn = (Button)findViewById(view.getId());
+        Button btn = (Button) findViewById(view.getId());
 
         levelSelected = Integer.parseInt(btn.getText().toString());
 
@@ -54,40 +55,37 @@ private HighscoreDB scoreDB;
         previewLevel();
     }
 
-    public void onActivityResult(int requestCode, int responseCode, Intent data){
-        if(requestCode == QCODE_SELECT){
-            if(responseCode == RCODE_START){
+    public void onActivityResult(int requestCode, int responseCode, Intent data) {
+        if (requestCode == QCODE_SELECT) {
+            if (responseCode == RCODE_START) {
                 SoundManager.playSound(0);
                 Intent intent = new Intent(this, MainActivity.class);
-                intent.putExtra("LevelImage",levels[levelSelected -1]);
+                intent.putExtra("LevelImage", levels[levelSelected - 1]);
                 startActivityForResult(intent, QCODE_PLAY);
-            }
-            else if(responseCode == RCODE_SCORE){
+            } else if (responseCode == RCODE_SCORE) {
                 SoundManager.playSound(3);
-                if(scoreDB.getScore(levelSelected) != null) {
+                if (scoreDB.getScore(levelSelected) != null) {
                     SoundManager.playSound(0);
                     Intent intent = new Intent(this, ScoreActivity.class);
                     intent.putExtra("Scores", scoreDB.getScore(levelSelected));
                     startActivityForResult(intent, QCODE_SCORE);
-                }else{
-                    Toast toast = Toast.makeText(getApplicationContext(),R.string.noscre, Toast.LENGTH_SHORT);
+                } else {
+                    Toast toast = Toast.makeText(getApplicationContext(), R.string.noscre, Toast.LENGTH_SHORT);
                     toast.show();
                 }
             }
-        }
-        else if(requestCode == QCODE_SCORE) {
+        } else if (requestCode == QCODE_SCORE) {
             //When the score is closed, re-open the level preview
-            if(responseCode != 0) {
+            if (responseCode != 0) {
                 SoundManager.playSound(2);
-            scoreDB.clearLevel(levelSelected);
+                scoreDB.clearLevel(levelSelected);
             }
             previewLevel();
-        }
-        else if(requestCode == QCODE_PLAY){
-            if(responseCode != 0) {
+        } else if (requestCode == QCODE_PLAY) {
+            if (responseCode != 0) {
                 SoundManager.playSound(4);
                 scoreDB.createScore(levelSelected, responseCode);
-                Toast toast = Toast.makeText(getApplicationContext(),"Level completed in " + responseCode + " " + " turns!", Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(getApplicationContext(), "Level completed in " + responseCode + " " + " turns!", Toast.LENGTH_SHORT);
                 toast.show();
 
             }
@@ -95,29 +93,27 @@ private HighscoreDB scoreDB;
         updateButtons();
     }
 
-    void previewLevel(){
+    void previewLevel() {
         SoundManager.playSound(3);
         Intent intent = new Intent(this, LevelPreviewActivity.class);
-        intent.putExtra("LevelNo",levelSelected);
-        intent.putExtra("LevelImage",levels[levelSelected -1]);
+        intent.putExtra("LevelNo", levelSelected);
+        intent.putExtra("LevelImage", levels[levelSelected - 1]);
         startActivityForResult(intent, QCODE_SELECT);
     }
 
 
-    public void goToDownload(View source)
-    {
+    public void goToDownload(View source) {
         SoundManager.playSound(3);
         Intent intent = new Intent(this, DownloadLevelActivity.class);
         startActivity(intent);
     }
 
-    void updateButtons(){
-        for(int i = 0; i < levels.length; i++){
-            Button check = (Button)findViewById(buttons[i]);
-            if(scoreDB.getScore(i + 1) != null){
+    void updateButtons() {
+        for (int i = 0; i < levels.length; i++) {
+            Button check = (Button) findViewById(buttons[i]);
+            if (scoreDB.getScore(i + 1) != null) {
                 check.setBackground(getResources().getDrawable(R.drawable.buttonclear));
-            }
-            else{
+            } else {
                 check.setBackground(getResources().getDrawable(R.drawable.buttonnew));
             }
         }

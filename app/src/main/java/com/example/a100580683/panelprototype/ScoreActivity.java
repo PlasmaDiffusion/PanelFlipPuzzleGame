@@ -21,21 +21,21 @@ public class ScoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scores);
         Bundle retrieve = getIntent().getExtras();
 
-        ListView scoreContainer = (ListView)findViewById(R.id.lstScores);
+        ListView scoreContainer = (ListView) findViewById(R.id.lstScores);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, retrieve.getStringArray("Scores"));
         scoreContainer.setAdapter(adapter);
 
 
     }
 
-    public void closeScores(View view){
+    public void closeScores(View view) {
         SoundManager.playSound(3);
         Intent result = new Intent(Intent.ACTION_PICK);
         setResult(0);
         finish();
     }
 
-    public void deleteScores(View view){
+    public void deleteScores(View view) {
         SoundManager.playSound(2);
         Intent result = new Intent(Intent.ACTION_PICK);
         setResult(1);

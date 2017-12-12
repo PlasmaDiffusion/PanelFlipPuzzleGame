@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@drawable/diamond_background_gradient_white"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/diamond_background_gradient_white">
 
     <TableLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:gravity="center_horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/Btnlvl1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -24,7 +24,7 @@
                 android:text="@string/lvl_1" />
 
             <Button
-                android:id="@+id/button13"
+                android:id="@+id/Btnlvl2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -33,7 +33,7 @@
                 android:text="@string/lvl_2" />
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/Btnlvl3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -43,7 +43,7 @@
 
 
             <Button
-                android:id="@+id/button14"
+                android:id="@+id/Btnlvl4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -52,33 +52,33 @@
                 android:text="@string/lvl_4" />
 
 
-
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:onClick="selectLevel"
-            android:text="@string/lvl_5" />
-
-        <Button
-            android:id="@+id/button21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:onClick="selectLevel"
-            android:text="@string/lvl_6" />
+            <Button
+                android:id="@+id/Btnstart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:onClick="selectLevel"
+                android:text="@string/lvl_5" />
 
             <Button
-                android:id="@+id/button23"
+                android:id="@+id/Btnlvl6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:onClick="selectLevel"
+                android:text="@string/lvl_6" />
+
+            <Button
+                android:id="@+id/Btnlvl7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -87,7 +87,7 @@
                 android:text="@string/lvl_7" />
 
             <Button
-                android:id="@+id/button24"
+                android:id="@+id/Btnlvl8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -96,36 +96,31 @@
                 android:text="@string/lvl_8" />
 
 
-
-    </TableRow>
-
-
-
-
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal"/>
+            android:gravity="center_horizontal" />
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal"/>
+            android:gravity="center_horizontal" />
     </TableLayout>
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/Btnerase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="42dp"
-        android:text="@string/btn_lbl_downloadlvl"
-        android:onClick="goToDownload"/>
+        android:onClick="goToDownload"
+        android:text="@string/btn_lbl_downloadlvl" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Lblselect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/urlEditText"
+        android:id="@+id/Txturl"
         android:layout_width="318dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="textWebEmailAddress"
         android:hint="@string/lbl_hnt_code"
+        android:inputType="textWebEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/Btndownload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -35,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/Btnback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -47,11 +46,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/Btndownload"
         app:layout_constraintVertical_bias="0.94" />
 
     <Button
-        android:id="@+id/playButton"
+        android:id="@+id/Btnplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -59,7 +58,7 @@
         android:layout_marginStart="8dp"
         android:onClick="play"
         android:text="@string/btn_lbl_play"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintBottom_toTopOf="@+id/Btnback"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -70,13 +69,13 @@
         android:layout_marginBottom="72dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintBottom_toTopOf="@+id/Btndownload"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_menu_gallery" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Lblexample"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -86,7 +85,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/Btnhelp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -96,9 +95,9 @@
         android:elevation="0dp"
         android:onClick="openHelp"
         android:text="@string/help"
-        app:layout_constraintBottom_toTopOf="@+id/playButton"
+        app:layout_constraintBottom_toTopOf="@+id/Btnplay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/Btndownload" />
 
 </android.support.constraint.ConstraintLayout>

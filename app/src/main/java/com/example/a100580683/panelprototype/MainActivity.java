@@ -2,9 +2,6 @@ package com.example.a100580683.panelprototype;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.DashPathEffect;
-import android.graphics.drawable.BitmapDrawable;
-import android.os.Debug;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,9 +13,6 @@ import android.widget.ToggleButton;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.RectF;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -39,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initPanels();
-        turnDisplay = (TextView)findViewById(R.id.txt_Turns);
+        turnDisplay = (TextView) findViewById(R.id.Lblturns);
 
         Intent callingIntent = getIntent();
 
@@ -48,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
         downloaded = callingIntent.getBooleanExtra("downloaded", false);
 
 
-        if (downloaded)
-        {
+        if (downloaded) {
             byte[] byteArray = getIntent().getByteArrayExtra("Image");
             downloadedImage = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
 
@@ -76,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         //Assign target reference image
         Bitmap targetImage = Bitmap.createBitmap(levelImage, 0, 0, 50, 50);
 
-        ImageView image = (ImageView)findViewById(R.id.targetImage);
+        ImageView image = (ImageView) findViewById(R.id.targetImage);
         image.setImageBitmap(targetImage);
 
 
@@ -114,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
             for (int j = 0; j < 5; j++) {
 
 
-                int pixel = levelImage.getPixel( 5 + (j * 10), 5 + (i + 6) * 10);
+                int pixel = levelImage.getPixel(5 + (j * 10), 5 + (i + 6) * 10);
                 int redValue = Color.red(pixel);
                 int blueValue = Color.blue(pixel);
                 int greenValue = Color.green(pixel);
@@ -142,22 +135,21 @@ public class MainActivity extends AppCompatActivity {
             } else //If not its blue
                 //panel.setBackgroundColor(Color.parseColor("#1d4e89"));
 
-            //Set win condition indicator
-            if (winLayout.charAt(i) == 'x')
-                panel.setTextColor(getResources().getColor(R.color.colorOffLight));
-            else if (winLayout.charAt(i) == 'o')
-                panel.setTextColor(getResources().getColor(R.color.colorOnDark));
+                //Set win condition indicator
+                if (winLayout.charAt(i) == 'x')
+                    panel.setTextColor(getResources().getColor(R.color.colorOffLight));
+                else if (winLayout.charAt(i) == 'o')
+                    panel.setTextColor(getResources().getColor(R.color.colorOnDark));
 
-            else { //Panels will have no text on them
-                panel.setText("");
-                panel.setTextOn("");
-                panel.setTextOff("");
-            }
+                else { //Panels will have no text on them
+                    panel.setText("");
+                    panel.setTextOn("");
+                    panel.setTextOff("");
+                }
         }
     }
 
-    public void initPanels()
-    {
+    public void initPanels() {
         ToggleButton panel;
 
         panelIDs = new int[]{R.id.toggleButton0, R.id.toggleButton1, R.id.toggleButton2, R.id.toggleButton3, R.id.toggleButton4,
@@ -168,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Set panels to whatever colour they should be and also display the win requirements.
-        for(int i= 0; i < 25; i++){
+        for (int i = 0; i < 25; i++) {
             panel = (ToggleButton) findViewById((panelIDs[i]));
             panel.setChecked(false);
             panel.setText("");
@@ -178,18 +170,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void flipPanel(View source)
-    {
+    public void flipPanel(View source) {
         SoundManager.playSound(1);
         int clickedPanelID = source.getId();
 
         int clickedPanelNumber = 0;
 
         //Determine which button was just pressed
-        for (int i = 0; i <panelIDs.length; i++)
-        {
-            if (panelIDs[i] == clickedPanelID)
-            {
+        for (int i = 0; i < panelIDs.length; i++) {
+            if (panelIDs[i] == clickedPanelID) {
                 clickedPanelNumber = i;
                 break;
 
@@ -207,8 +196,7 @@ public class MainActivity extends AppCompatActivity {
         int startOfRow = clickedPanelNumber - (clickedPanelNumber % 5);
 
         //Toggle buttons horizontally
-        for (int i = startOfRow; i < startOfRow + 5; i++)
-        {
+        for (int i = startOfRow; i < startOfRow + 5; i++) {
 
             //Skip if already flipped
             if (i == clickedPanelNumber) continue;
@@ -218,8 +206,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Toggle buttons vertically
-        for (int i = 0 + (clickedPanelNumber % 5) ; i < 25; i+= 5)
-        {
+        for (int i = 0 + (clickedPanelNumber % 5); i < 25; i += 5) {
             //Skip if already flipped
             if (i == clickedPanelNumber) continue;
 
@@ -227,34 +214,32 @@ public class MainActivity extends AppCompatActivity {
             panel.toggle();
         }
 
-        for(int i = 0; i < 25; i++){
-            panel = (ToggleButton)findViewById(panelIDs[i]);
+        for (int i = 0; i < 25; i++) {
+            panel = (ToggleButton) findViewById(panelIDs[i]);
 
-            if(panel.isChecked()){
+            if (panel.isChecked()) {
                 //panel.setBackgroundColor(Color.parseColor("#f69256"));
 
-            }else{
+            } else {
                 //panel.setBackgroundColor(Color.parseColor("#1d4e89"));
             }
         }
 
         turns++;
 
-        turnDisplay.setText( "Turns:" + turns);
+        turnDisplay.setText("Turns:" + turns);
 
-        if(checkIfWon()) endGame(source);
+        if (checkIfWon()) endGame(source);
 
     }
 
-    private  boolean checkIfWon()
-    {
+    private boolean checkIfWon() {
         ToggleButton panel;
-        for(int i= 0; i < 25; i++)
-        {
+        for (int i = 0; i < 25; i++) {
             //Do nothing if this panel doesn't matter
             if (winLayout.charAt(i) == '-') continue;
 
-            panel = (ToggleButton)findViewById(panelIDs[i]);
+            panel = (ToggleButton) findViewById(panelIDs[i]);
 
             if (!panel.isChecked() && winLayout.charAt(i) == 'x') continue;
             else if (panel.isChecked() && winLayout.charAt(i) == 'o') continue;
@@ -264,24 +249,24 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //If made through the above, ya won
-        return  true;
+        return true;
     }
 
 
-    public void endGame(View view){
+    public void endGame(View view) {
         Intent result = new Intent(Intent.ACTION_PICK);
         setResult(turns);
         finish();
     }
 
-    public void resetGame(View view){
+    public void resetGame(View view) {
         turns = 0;
-        turnDisplay.setText( "Turns:" + turns);
+        turnDisplay.setText("Turns:" + turns);
         initPanels();
         loadLevel(level);
     }
 
-    public void quitGame(View view){
+    public void quitGame(View view) {
         Intent result = new Intent(Intent.ACTION_PICK);
         setResult(0);
         finish();

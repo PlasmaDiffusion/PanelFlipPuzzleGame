@@ -1,39 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <Button
-        android:id="@+id/btn_Start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_lbl_play"
-        android:onClick="startGame"
-            android:layout_marginBottom="51dp"
-            android:layout_alignBottom="@+id/btn_Help"
-            android:layout_centerHorizontal="true" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btn_Help"
+        android:id="@+id/Btnstart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_lbl_tutorial"
+        android:layout_alignBottom="@+id/Btnhelp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp"
+        android:onClick="startGame"
+        android:text="@string/btn_lbl_play" />
+
+    <Button
+        android:id="@+id/Btnhelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="72dp"
-        android:onClick="showTutorial"/>
+        android:onClick="showTutorial"
+        android:text="@string/btn_lbl_tutorial" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_Start"
+        android:layout_above="@+id/Btnstart"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="52dp"
         app:srcCompat="@drawable/splash" />
 
 
-    </RelativeLayout>
+</RelativeLayout>

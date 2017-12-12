@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/diamond_background_gradient_white">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Btnstart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_lbl_start"
-        android:layout_above="@+id/button3"
+        android:layout_above="@+id/Btnscores"
         android:layout_centerHorizontal="true"
-        android:onClick="startLevel"/>
+        android:onClick="startLevel"
+        android:text="@string/btn_lbl_start" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/Btnscores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_lbl_scores"
-        android:layout_above="@+id/button4"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:onClick="viewScores"/>
+        android:layout_above="@+id/Btnback"
+        android:layout_alignLeft="@+id/Btnstart"
+        android:layout_alignStart="@+id/Btnstart"
+        android:onClick="viewScores"
+        android:text="@string/btn_lbl_scores" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/Btnback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_lbl_back"
+        android:layout_alignLeft="@+id/Btnscores"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/button3"
-        android:layout_alignStart="@+id/button3"
-        android:onClick="cancelSelect"/>
+        android:layout_alignStart="@+id/Btnscores"
+        android:onClick="cancelSelect"
+        android:text="@string/btn_lbl_back" />
 
     <ImageView
         android:id="@+id/imageView"

@@ -16,41 +16,33 @@ import java.io.InputStream;
 
 //Loads in an online bitmap of an extra/custom level. A play button will get enabled when this happens
 
-public class DownloadImageTask extends AsyncTask<String, Void, Bitmap>
-{
+public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     private ImageView image;
     private Button enabledButton;
     private Bitmap bitmap;
 
-    public DownloadImageTask(ImageView image, Button enabledButton)
-    {
+    public DownloadImageTask(ImageView image, Button enabledButton) {
         this.enabledButton = enabledButton;
         this.image = image;
     }
 
-    protected Bitmap doInBackground(String... urls)
-    {
+    protected Bitmap doInBackground(String... urls) {
         Bitmap newImage = null;
         String url = urls[0];
 
-        try
-        {
+        try {
             InputStream inputStream = new java.net.URL(url).openStream();
             newImage = BitmapFactory.decodeStream(inputStream);
-        }
-        catch (Exception e)
-        {
-        e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         return newImage;
     }
 
-    protected void onPostExecute(Bitmap result)
-    {
+    protected void onPostExecute(Bitmap result) {
         //Make the image appear, along with a play button
-        if (result != null)
-        {
+        if (result != null) {
             bitmap = result;
             image.setImageBitmap(bitmap);
             enabledButton.setEnabled(true);

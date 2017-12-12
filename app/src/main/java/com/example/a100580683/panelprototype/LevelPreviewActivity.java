@@ -31,12 +31,12 @@ public class LevelPreviewActivity extends AppCompatActivity {
 
         levelID = data.getInt("LevelImage");
 
-        ImageView image = (ImageView)findViewById(R.id.imageView);
+        ImageView image = (ImageView) findViewById(R.id.imageView);
 
         image.setImageResource(levelID);
     }
 
-    public void startLevel(View view){
+    public void startLevel(View view) {
         Intent result = new Intent(Intent.ACTION_PICK);
 
 
@@ -44,13 +44,13 @@ public class LevelPreviewActivity extends AppCompatActivity {
         finish();
     }
 
-    public void viewScores(View view){
+    public void viewScores(View view) {
         Intent result = new Intent(Intent.ACTION_PICK);
         setResult(RCODE_SCORE);
         finish();
     }
 
-    public void cancelSelect(View view){
+    public void cancelSelect(View view) {
         SoundManager.playSound(2);
         Intent result = new Intent(Intent.ACTION_PICK);
         setResult(-1);

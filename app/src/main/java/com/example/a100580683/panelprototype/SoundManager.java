@@ -20,9 +20,9 @@ public class SoundManager extends Application {
 
     private static int soundFx[];
 
-    private static  AssetFileDescriptor soundPaths[];
+    private static AssetFileDescriptor soundPaths[];
 
-    public static SoundPool getPool(){
+    public static SoundPool getPool() {
         return soundManager;
     }
 
@@ -36,22 +36,22 @@ public class SoundManager extends Application {
         soundPaths = new AssetFileDescriptor[5];
 
         soundPaths[0] = res.openRawResourceFd(R.raw.btn_forward);
-        soundFx[0] = soundManager.load(soundPaths[0],0);
+        soundFx[0] = soundManager.load(soundPaths[0], 0);
 
         soundPaths[1] = res.openRawResourceFd(R.raw.flip);
-        soundFx[1] = soundManager.load(soundPaths[1],0);
+        soundFx[1] = soundManager.load(soundPaths[1], 0);
 
         soundPaths[2] = res.openRawResourceFd(R.raw.btn_back);
-        soundFx[2] = soundManager.load(soundPaths[2],0);
+        soundFx[2] = soundManager.load(soundPaths[2], 0);
 
         soundPaths[3] = res.openRawResourceFd(R.raw.btn_general);
-        soundFx[3] = soundManager.load(soundPaths[3],0);
+        soundFx[3] = soundManager.load(soundPaths[3], 0);
 
         soundPaths[4] = res.openRawResourceFd(R.raw.twinkle);
-        soundFx[4] = soundManager.load(soundPaths[4],0);
+        soundFx[4] = soundManager.load(soundPaths[4], 0);
     }
 
-    public static void playSound(int id){
-        soundManager.play(soundFx[id], 1f, 1f,0, 0, 1f);
+    public static void playSound(int id) {
+        soundManager.play(soundFx[id], 1f, 1f, 0, 0, 1f);
     }
 }
