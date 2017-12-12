@@ -10,5 +10,6 @@
     <color name="colorOnDark">#a35323</color>
 
     <color name="bg1">#00fc2e</color>
+    <color name="bg2">#ce00fc</color>
 
 </resources>

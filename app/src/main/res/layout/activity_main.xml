@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
+    android:id="@+id/levelBackground"
     android:background="@drawable/diamond_background_gradient_white"
     android:backgroundTint="@color/bg1"
     android:backgroundTintMode="multiply"

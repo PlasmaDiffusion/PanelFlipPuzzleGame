@@ -68,8 +68,8 @@
 
     <ImageView
         android:id="@+id/downloadedPreviewImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="26dp"
+        android:layout_width="124dp"
+        android:layout_height="113dp"
         android:layout_marginBottom="72dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"

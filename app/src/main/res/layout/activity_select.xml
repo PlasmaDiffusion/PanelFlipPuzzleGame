@@ -101,7 +101,44 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal" />
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/Btnlvl9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:onClick="selectLevel"
+                android:text="@string/_9" />
+
+            <Button
+                android:id="@+id/Btnlvl10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:onClick="selectLevel"
+                android:text="@string/lvl_10" />
+
+            <Button
+                android:id="@+id/Btnlvl11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:onClick="selectLevel"
+                android:text="@string/lvl_11" />
+
+            <Button
+                android:id="@+id/Btnlvl12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:onClick="selectLevel"
+                android:text="@string/lvl_12" />
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"

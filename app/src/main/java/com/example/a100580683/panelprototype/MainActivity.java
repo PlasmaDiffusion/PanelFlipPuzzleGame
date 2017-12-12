@@ -1,13 +1,16 @@
 package com.example.a100580683.panelprototype;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Handler;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
@@ -42,10 +45,15 @@ public class MainActivity extends AppCompatActivity {
         downloaded = callingIntent.getBooleanExtra("downloaded", false);
 
 
+
         if (downloaded) {
             byte[] byteArray = getIntent().getByteArrayExtra("Image");
             downloadedImage = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
 
+            //Downloaded levels get a different background
+            ConstraintLayout relativeLayout = (ConstraintLayout) findViewById(R.id.levelBackground);
+            relativeLayout.setBackground(getResources().getDrawable(R.drawable.diamond_background_gradient));
+            relativeLayout.setBackgroundTintList(null);
         }
 
         loadLevel(level);

@@ -42,5 +42,9 @@
     <string name="lvl_6">6</string>
     <string name="lvl_7">7</string>
     <string name="lvl_8">8</string>
+    <string name="_9">9</string>
+    <string name="lvl_10">10</string>
+    <string name="lvl_11">11</string>
+    <string name="lvl_12">12</string>
 
 </resources>

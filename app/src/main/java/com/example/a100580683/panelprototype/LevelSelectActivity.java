@@ -32,11 +32,17 @@ public class LevelSelectActivity extends AppCompatActivity {
 
         levels = new int[]
                 {
-                        R.raw.level1, R.raw.level2, R.raw.level3, R.raw.level4, R.raw.level5, R.raw.level6, R.raw.level7, R.raw.level8
+                        R.raw.level1, R.raw.level2, R.raw.level3, R.raw.level4,
+                        R.raw.level5, R.raw.level6, R.raw.level7, R.raw.level8,
+                        R.raw.level9, R.raw.level10, R.raw.level11, R.raw.level12
                 };
 
         buttons = new int[]{
-                R.id.Btnlvl1, R.id.Btnlvl2, R.id.Btnlvl3, R.id.Btnlvl4, R.id.Btnstart, R.id.Btnlvl6, R.id.Btnlvl7, R.id.Btnlvl8
+                R.id.Btnlvl1, R.id.Btnlvl2, R.id.Btnlvl3, R.id.Btnlvl4,
+
+                R.id.Btnstart, R.id.Btnlvl6, R.id.Btnlvl7, R.id.Btnlvl8,
+
+                R.id.Btnlvl9, R.id.Btnlvl10, R.id.Btnlvl11,R.id.Btnlvl12
         };
 
         scoreDB = new HighscoreDB(this);
