@@ -1,12 +1,16 @@
 package com.example.a100580683.panelprototype;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.Resources;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
+
+import java.io.IOException;
 
 /**
  * Created by 100585588 on 12/5/2017.
@@ -17,6 +21,8 @@ import android.util.Log;
 public class SoundManager extends Application {
 
     public static SoundPool soundManager = null;
+
+    private static MediaPlayer musicMediaPlayer = null;
 
     private static int soundFx[];
 
@@ -53,5 +59,37 @@ public class SoundManager extends Application {
 
     public static void playSound(int id) {
         soundManager.play(soundFx[id], 1f, 1f, 0, 0, 1f);
+    }
+
+    //Background music (song is from freeplaymusic.com)
+    public static void playMusic(Context context)
+    {
+        Resources res = context.getResources();
+
+
+        // load a background song
+        musicMediaPlayer = new MediaPlayer();
+        AssetFileDescriptor musicFd = res.openRawResourceFd(R.raw.a_bit_of_a_puzzle);
+        try {
+            musicMediaPlayer.setDataSource(musicFd.getFileDescriptor(),
+                    musicFd.getStartOffset(),
+                    musicFd.getLength());
+
+            musicMediaPlayer.prepare(); // blocking
+            musicMediaPlayer.setLooping(true);
+            musicMediaPlayer.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.i("Loading", "Music load failed...");
+        }
+    }
+
+    public static void stopMusic()
+    {
+        if (musicMediaPlayer != null)
+        {
+            if (musicMediaPlayer.isPlaying()) musicMediaPlayer.stop();
+        }
+
     }
 }

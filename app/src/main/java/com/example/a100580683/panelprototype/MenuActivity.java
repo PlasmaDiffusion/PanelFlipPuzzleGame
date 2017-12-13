@@ -20,6 +20,7 @@ public class MenuActivity extends AppCompatActivity {
         sm = new SoundManager();
         sm.initializePool(getResources());
 
+        sm.playMusic(this);
 
     }
 
