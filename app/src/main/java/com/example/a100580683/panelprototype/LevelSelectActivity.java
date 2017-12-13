@@ -32,9 +32,9 @@ public class LevelSelectActivity extends AppCompatActivity {
 
         levels = new int[]
                 {
-                        R.raw.level1, R.raw.level2, R.raw.level3, R.raw.level4,
-                        R.raw.level5, R.raw.level6, R.raw.level7, R.raw.level8,
-                        R.raw.level9, R.raw.level10, R.raw.level11, R.raw.level12
+                        R.raw.level1, R.raw.level2, R.raw.level9, R.raw.level10,
+                        R.raw.level4, R.raw.level11, R.raw.level3, R.raw.level5,
+                        R.raw.level7, R.raw.level8, R.raw.level12, R.raw.level6
                 };
 
         buttons = new int[]{
