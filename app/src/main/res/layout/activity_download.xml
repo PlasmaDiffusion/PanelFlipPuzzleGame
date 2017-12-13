@@ -43,14 +43,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/buttonnew"
         android:onClick="cancel"
         android:text="@string/btn_lbl_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Btndownload"
-        app:layout_constraintVertical_bias="0.94"
-        android:background="@drawable/buttonnew"/>
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/Btnplay"
@@ -59,12 +59,12 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:background="@drawable/buttonnew"
         android:onClick="play"
         android:text="@string/btn_lbl_play"
         app:layout_constraintBottom_toTopOf="@+id/Btnback"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/buttonnew"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/downloadedPreviewImageView"

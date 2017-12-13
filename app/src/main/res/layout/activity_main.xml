@@ -44,11 +44,12 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
+            <!--please refer to pannel.xml in drawable for refernce for custom toggle buttons-->
             <ToggleButton
                 android:id="@+id/tgl_11"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
+
                 android:background="@drawable/pannel"
                 android:checked="false"
                 android:onClick="flipPanel"
