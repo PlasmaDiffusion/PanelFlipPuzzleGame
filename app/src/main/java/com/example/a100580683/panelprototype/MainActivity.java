@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
             if (startingLayout.charAt(i) == 'o') {
 
                 //panel.setBackgroundColor(Color.parseColor("#f69256"));
-                //panel.setText("");
+
                 panel.toggle();
 
             } else //If not its blue
@@ -194,8 +194,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        //Flip stuff in a + pattern
-        //Log.d("lol", Integer.toString(clickedPanelNumber));
 
 
         ToggleButton panel;

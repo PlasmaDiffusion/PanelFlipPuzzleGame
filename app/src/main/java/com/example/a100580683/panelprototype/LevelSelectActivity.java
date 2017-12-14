@@ -30,6 +30,7 @@ public class LevelSelectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
 
+        //Array of every level image file
         levels = new int[]
                 {
                         R.raw.level1, R.raw.level2, R.raw.level9, R.raw.level10,

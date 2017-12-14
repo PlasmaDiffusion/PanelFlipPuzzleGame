@@ -26,6 +26,7 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         this.image = image;
     }
 
+    //Decode an image with bitmap factory
     protected Bitmap doInBackground(String... urls) {
         Bitmap newImage = null;
         String url = urls[0];
@@ -41,7 +42,7 @@ public class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
     }
 
     protected void onPostExecute(Bitmap result) {
-        //Make the image appear, along with a play button
+        //Make the image appear, and also enable play button
         if (result != null) {
             bitmap = result;
             image.setImageBitmap(bitmap);

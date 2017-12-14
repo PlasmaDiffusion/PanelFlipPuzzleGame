@@ -12,32 +12,41 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="40dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
             android:gravity="center_horizontal">
 
             <Button
                 android:id="@+id/Btnlvl1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="77dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:onClick="selectLevel"
                 android:text="@string/lvl_1" />
 
             <Button
                 android:id="@+id/Btnlvl2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="77dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:onClick="selectLevel"
                 android:text="@string/lvl_2" />
 
             <Button
                 android:id="@+id/Btnlvl3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="77dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:onClick="selectLevel"
                 android:text="@string/lvl_3" />
 
@@ -45,9 +54,10 @@
             <Button
                 android:id="@+id/Btnlvl4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="77dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:onClick="selectLevel"
                 android:text="@string/lvl_4" />
 
@@ -57,41 +67,46 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
             android:gravity="center_horizontal">
 
             <Button
                 android:id="@+id/Btnstart"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="77dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:onClick="selectLevel"
                 android:text="@string/lvl_5" />
 
             <Button
                 android:id="@+id/Btnlvl6"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="77dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:onClick="selectLevel"
                 android:text="@string/lvl_6" />
 
             <Button
                 android:id="@+id/Btnlvl7"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="77dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:onClick="selectLevel"
                 android:text="@string/lvl_7" />
 
             <Button
                 android:id="@+id/Btnlvl8"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="77dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:onClick="selectLevel"
                 android:text="@string/lvl_8" />
 
@@ -106,44 +121,44 @@
             <Button
                 android:id="@+id/Btnlvl9"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="77dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:onClick="selectLevel"
                 android:text="@string/_9" />
 
             <Button
                 android:id="@+id/Btnlvl10"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="77dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:onClick="selectLevel"
                 android:text="@string/lvl_10" />
 
             <Button
                 android:id="@+id/Btnlvl11"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="77dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:onClick="selectLevel"
                 android:text="@string/lvl_11" />
 
             <Button
                 android:id="@+id/Btnlvl12"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="77dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
                 android:onClick="selectLevel"
                 android:text="@string/lvl_12" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal" />
     </TableLayout>
 
     <Button

@@ -1,4 +1,8 @@
 Scott Cooper
+-Game Mechanics (Main Activity)
+-Loading levels from an image file
+-Downloading image files for additional levels
+
 
 Ellivro Guevarra
 -Soundpool
