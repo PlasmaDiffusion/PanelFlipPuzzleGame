@@ -10,3 +10,7 @@ Ellivro Guevarra
 -Intent switching for Level Select
 
 Thomas Lindo
+-Level Design 
+-Asset creation (custom toggle buttons, etc.)
+-Project management
+-Playtesting
