@@ -1,0 +1,8 @@
+Scott Cooper
+
+Ellivro Guevarra
+-Soundpool
+-Score database
+-Intent switching for Level Select
+
+Thomas Lindo

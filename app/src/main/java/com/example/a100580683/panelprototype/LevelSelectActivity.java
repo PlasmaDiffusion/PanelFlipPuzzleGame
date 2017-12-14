@@ -57,19 +57,28 @@ public class LevelSelectActivity extends AppCompatActivity {
 
         levelSelected = Integer.parseInt(btn.getText().toString());
 
-
         previewLevel();
     }
 
     public void onActivityResult(int requestCode, int responseCode, Intent data) {
+        //Selecting a level brings up the preview screen, which has three buttons
+
+        //Inital case. Intent opened to preview level
         if (requestCode == QCODE_SELECT) {
+
+            //If the user selected "Play"
             if (responseCode == RCODE_START) {
+                //Start the game
                 SoundManager.playSound(0);
                 Intent intent = new Intent(this, MainActivity.class);
                 intent.putExtra("LevelImage", levels[levelSelected - 1]);
                 startActivityForResult(intent, QCODE_PLAY);
+
+                //If the user selected "Scores"
             } else if (responseCode == RCODE_SCORE) {
                 SoundManager.playSound(3);
+
+                //Only display the score intent if scores exist
                 if (scoreDB.getScore(levelSelected) != null) {
                     SoundManager.playSound(0);
                     Intent intent = new Intent(this, ScoreActivity.class);
@@ -78,16 +87,26 @@ public class LevelSelectActivity extends AppCompatActivity {
                 } else {
                     Toast toast = Toast.makeText(getApplicationContext(), R.string.noscore, Toast.LENGTH_SHORT);
                     toast.show();
+                    previewLevel();
                 }
             }
+
+            //From the Score intent...
         } else if (requestCode == QCODE_SCORE) {
-            //When the score is closed, re-open the level preview
+
+            //Delete scores for the selected level if the user wanted to
             if (responseCode != 0) {
                 SoundManager.playSound(2);
                 scoreDB.clearLevel(levelSelected);
             }
+
+            //When the score is closed, re-open the level preview
             previewLevel();
+
+            //After the user plays a level...
         } else if (requestCode == QCODE_PLAY) {
+
+            //Add a highscore if the user completed the level
             if (responseCode != 0) {
                 SoundManager.playSound(4);
                 scoreDB.createScore(levelSelected, responseCode);
@@ -96,6 +115,8 @@ public class LevelSelectActivity extends AppCompatActivity {
 
             }
         }
+
+        //Update button images
         updateButtons();
     }
 
@@ -115,8 +136,12 @@ public class LevelSelectActivity extends AppCompatActivity {
     }
 
     void updateButtons() {
+
+        //Check every level
         for (int i = 0; i < levels.length; i++) {
             Button check = (Button) findViewById(buttons[i]);
+
+            //If at least one score exists, the level has been completed
             if (scoreDB.getScore(i + 1) != null) {
                 check.setBackground(getResources().getDrawable(R.drawable.buttonclear));
             } else {

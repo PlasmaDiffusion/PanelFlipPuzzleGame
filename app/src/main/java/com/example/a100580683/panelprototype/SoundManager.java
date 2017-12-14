@@ -18,6 +18,7 @@ import java.io.IOException;
 
 //Idea taken from https://stackoverflow.com/questions/16259727/passing-soundpool-to-multiple-activities-in-android
 //Button sound effects from https://www.youtube.com/watch?v=2o11YM2Mwjc
+//Level Complete jingle ripped from BIT.TRIP.FLUX (PC)
 public class SoundManager extends Application {
 
     public static SoundPool soundManager = null;
