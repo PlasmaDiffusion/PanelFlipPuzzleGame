@@ -144,9 +144,9 @@ public class LevelSelectActivity extends AppCompatActivity {
 
             //If at least one score exists, the level has been completed
             if (scoreDB.getScore(i + 1) != null) {
-                check.setBackground(getBaseContext().getDrawable(R.drawable.buttonclear));
+                check.setBackground(getResources().getDrawable(R.drawable.buttonclear));
             } else {
-                check.setBackground(getBaseContext().getDrawable(R.drawable.buttonnew));
+                check.setBackground(getResources().getDrawable(R.drawable.buttonnew));
             }
         }
     }
