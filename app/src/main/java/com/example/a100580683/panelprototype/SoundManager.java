@@ -68,7 +68,7 @@ public class SoundManager extends Application {
         Resources res = context.getResources();
 
 
-        // load a background song
+        // Load a background song. Most of this is taken from the Media Demo
         musicMediaPlayer = new MediaPlayer();
         AssetFileDescriptor musicFd = res.openRawResourceFd(R.raw.a_bit_of_a_puzzle);
         try {
@@ -76,7 +76,7 @@ public class SoundManager extends Application {
                     musicFd.getStartOffset(),
                     musicFd.getLength());
 
-            musicMediaPlayer.prepare(); // blocking
+            musicMediaPlayer.prepare();
             musicMediaPlayer.setLooping(true);
             musicMediaPlayer.start();
         } catch (IOException e) {
