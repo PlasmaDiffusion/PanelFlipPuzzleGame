@@ -8,6 +8,7 @@ Ellivro Guevarra
 -Soundpool
 -Score database
 -Intent switching for Level Select
+-Playtesting
 
 Thomas Lindo
 -Level Design 
